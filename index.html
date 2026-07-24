@@ -38,10 +38,37 @@ padding:70px 20px;
 
 
 .logo{
-font-size:70px;
+font-size:80px;
 font-weight:900;
-color:#ffb000;
-text-shadow:0 0 20px #ff9900;
+color:#ffd45a;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+text-shadow:
+0 0 10px #ffb000,
+0 0 25px #ff6600,
+0 0 50px #ff3300;
+
+animation:pulse 2s infinite;
+}
+
+
+@keyframes pulse{
+
+0%{
+filter:brightness(1);
+}
+
+50%{
+filter:brightness(1.4);
+}
+
+100%{
+filter:brightness(1);
+}
+
 }
 
 
