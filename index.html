@@ -9,7 +9,7 @@
 <title>SONY BOOST | WoW PvP</title>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 
 <style>
@@ -23,38 +23,38 @@ box-sizing:border-box;
 
 body{
 
-font-family:'Orbitron',sans-serif;
+font-family:'Inter',sans-serif;
 
 color:white;
 
 min-height:100vh;
 
-overflow-x:hidden;
-
-
-/* Diablo + Sonic atmosphere */
 
 background:
 
 radial-gradient(
-circle at 20% 20%,
-rgba(0,140,255,.35),
+circle at 15% 20%,
+rgba(0,140,255,.22),
 transparent 35%
 ),
 
+
 radial-gradient(
-circle at 80% 30%,
-rgba(255,190,50,.25),
-transparent 30%
+circle at 85% 30%,
+rgba(255,190,60,.18),
+transparent 35%
 ),
+
 
 linear-gradient(
 135deg,
-#03040b,
-#09051a,
-#020207
+#05060d,
+#0b1020,
+#030409
 );
 
+
+overflow-x:hidden;
 
 }
 
@@ -62,20 +62,19 @@ linear-gradient(
 
 /* moving energy */
 
-
-body:before{
+body::before{
 
 content:"";
 
 position:fixed;
 
-width:600px;
+width:700px;
 
-height:600px;
+height:700px;
 
-top:-200px;
+left:-250px;
 
-left:-200px;
+top:-250px;
 
 
 background:
@@ -87,18 +86,20 @@ transparent 70%
 );
 
 
-filter:blur(80px);
+filter:blur(100px);
 
-animation:energy 8s infinite alternate;
+
+animation:energy 12s infinite alternate;
+
 
 z-index:-1;
-
 
 }
 
 
 
 @keyframes energy{
+
 
 from{
 
@@ -109,11 +110,13 @@ transform:translate(0,0);
 
 to{
 
-transform:translate(400px,250px);
+transform:translate(500px,300px);
 
 }
 
+
 }
+
 
 
 
@@ -124,56 +127,83 @@ transform:translate(400px,250px);
 
 header{
 
+
+max-width:1400px;
+
+margin:auto;
+
+
+padding:30px 50px;
+
+
 display:flex;
 
 justify-content:space-between;
 
 align-items:center;
 
-padding:30px 70px;
 
 }
+
+
 
 
 
 .brand{
 
 
-font-size:28px;
+font-size:26px;
 
 font-weight:900;
+
 
 color:#ffd369;
 
 
+letter-spacing:1px;
+
+
 text-shadow:
 
-0 0 15px #ffb000;
+0 0 20px rgba(255,200,80,.5);
 
 
 }
+
 
 
 
 nav a{
 
-color:white;
+
+color:#ddd;
+
 
 text-decoration:none;
 
-margin-left:30px;
 
-font-weight:bold;
+margin-left:35px;
+
+
+font-weight:600;
+
+
+transition:.3s;
+
 
 }
-
 
 
 nav a:hover{
 
+
 color:#00aaff;
 
+
 }
+
+
+
 
 
 
@@ -181,19 +211,26 @@ color:#00aaff;
 /* HERO */
 
 
+
 .hero{
 
-max-width:1300px;
+
+max-width:1400px;
+
 
 margin:auto;
 
+
+padding:100px 50px;
+
+
 display:flex;
 
-justify-content:space-between;
 
 align-items:center;
 
-padding:100px 40px;
+
+justify-content:space-between;
 
 
 }
@@ -207,21 +244,27 @@ padding:100px 40px;
 
 font-size:90px;
 
+
 font-weight:900;
+
+
+line-height:.9;
 
 
 color:#ffd369;
 
 
-letter-spacing:5px;
+letter-spacing:4px;
 
 
-animation:logoGlow 2s infinite alternate;
+text-shadow:
+
+
+0 0 25px rgba(255,190,50,.6);
 
 
 
 }
-
 
 
 
@@ -231,46 +274,18 @@ animation:logoGlow 2s infinite alternate;
 display:block;
 
 
-font-size:55px;
-
-
-letter-spacing:25px;
+font-size:65px;
 
 
 color:white;
 
 
-}
-
-
-
-@keyframes logoGlow{
-
-
-from{
-
-
-text-shadow:
-
-0 0 10px #ff9900;
+letter-spacing:18px;
 
 
 }
 
 
-to{
-
-
-text-shadow:
-
-0 0 40px #ffd369,
-0 0 80px #ff9900;
-
-
-}
-
-
-}
 
 
 
@@ -279,12 +294,18 @@ text-shadow:
 .hero h1{
 
 
-margin-top:30px;
+margin-top:35px;
 
-font-size:35px;
+
+font-size:38px;
+
+
+line-height:1.2;
 
 
 }
+
+
 
 
 
@@ -293,9 +314,15 @@ font-size:35px;
 
 margin-top:20px;
 
-color:#aaa;
 
-max-width:550px;
+max-width:600px;
+
+
+color:#aab0c0;
+
+
+font-size:18px;
+
 
 line-height:1.7;
 
@@ -305,39 +332,47 @@ line-height:1.7;
 
 
 
-.btn{
+
+.button{
 
 
 display:inline-block;
 
+
 margin-top:40px;
 
-padding:18px 45px;
+
+padding:16px 40px;
+
+
+border-radius:14px;
 
 
 background:
 
+
 linear-gradient(
 90deg,
 #5865F2,
-#00aaff
+#008cff
 );
 
-
-border-radius:15px;
 
 
 color:white;
 
+
 text-decoration:none;
 
 
-font-weight:900;
+font-weight:800;
 
 
 box-shadow:
 
-0 0 25px rgba(0,170,255,.5);
+
+0 0 30px rgba(0,140,255,.4);
+
 
 
 transition:.3s;
@@ -347,10 +382,10 @@ transition:.3s;
 
 
 
-.btn:hover{
+.button:hover{
 
 
-transform:scale(1.08);
+transform:translateY(-5px);
 
 
 }
@@ -359,13 +394,15 @@ transform:scale(1.08);
 
 
 
-/* HERO CHARACTER PLACE */
+
+/* HERO IMAGE PLACE */
 
 
-.hero-character{
+.hero-art{
 
 
 width:430px;
+
 
 height:430px;
 
@@ -375,12 +412,14 @@ border-radius:50%;
 
 display:flex;
 
-align-items:center;
 
 justify-content:center;
 
 
-font-size:160px;
+align-items:center;
+
+
+font-size:130px;
 
 
 
@@ -389,7 +428,7 @@ background:
 
 radial-gradient(
 circle,
-rgba(0,170,255,.3),
+rgba(0,160,255,.35),
 transparent 65%
 );
 
@@ -397,20 +436,20 @@ transparent 65%
 
 border:
 
-2px solid rgba(0,170,255,.6);
+1px solid rgba(0,170,255,.5);
 
 
 
 box-shadow:
 
 
-0 0 60px rgba(0,170,255,.4);
+0 0 80px rgba(0,150,255,.35);
 
 
 
 animation:
 
-float 3s infinite alternate;
+floating 4s infinite alternate;
 
 
 
@@ -420,7 +459,7 @@ float 3s infinite alternate;
 
 
 
-@keyframes float{
+@keyframes floating{
 
 
 from{
@@ -432,7 +471,7 @@ transform:translateY(0);
 
 to{
 
-transform:translateY(-25px);
+transform:translateY(-20px);
 
 }
 
@@ -446,10 +485,23 @@ transform:translateY(-25px);
 @media(max-width:900px){
 
 
+header{
+
+
+flex-direction:column;
+
+
+gap:20px;
+
+
+}
+
+
 .hero{
 
 
 flex-direction:column;
+
 
 text-align:center;
 
@@ -457,17 +509,30 @@ text-align:center;
 }
 
 
+
 .logo{
 
+
 font-size:55px;
+
 
 }
 
 
-.hero-character{
+.logo span{
+
+
+font-size:40px;
+
+
+}
+
+
+.hero-art{
 
 
 margin-top:50px;
+
 
 width:300px;
 
@@ -475,7 +540,6 @@ height:300px;
 
 
 }
-
 
 
 }
@@ -505,7 +569,6 @@ height:300px;
 
 <nav>
 
-
 <a href="#">
 Home
 </a>
@@ -530,8 +593,8 @@ Discord
 
 
 
-<section class="hero">
 
+<section class="hero">
 
 
 <div>
@@ -559,19 +622,19 @@ World of Warcraft PvP Boosting
 
 <p>
 
-Legendary rating push.
-Professional players.
-Fast and secure boosting.
+Professional Arena, Blitz, RBG and Gladiator services.
+Configure your order and reach your goals.
 
 </p>
 
 
 
-<a class="btn"
 
-href="https://discord.gg/S7vr7fjF8">
+<a class="button"
 
-JOIN DISCORD
+href="#">
+
+CONFIGURE BOOST
 
 </a>
 
@@ -583,11 +646,12 @@ JOIN DISCORD
 
 
 
-<div class="hero-character">
+<div class="hero-art">
 
-🦔⚡
+⚡
 
 </div>
+
 
 
 
@@ -610,37 +674,31 @@ JOIN DISCORD
 
 
 
-<div class="game-grid">
+<div class="cards">
 
 
 
-<div class="game-card">
+<div class="card"
+onclick="openConfig('Arena Boost')">
 
-<div class="icon">
+<div class="card-icon">
 ⚔️
 </div>
+
 
 <h3>
 Arena Boost
 </h3>
 
+
 <p>
 2v2 / 3v3 Rating Push
-<br>
-Professional PvP Players
 </p>
 
 
-<div class="gold-price">
-
-From $90
-
-</div>
-
-
-<a href="https://discord.gg/S7vr7fjF8">
-ORDER
-</a>
+<button>
+CONFIGURE
+</button>
 
 
 </div>
@@ -649,11 +707,15 @@ ORDER
 
 
 
-<div class="game-card">
 
-<div class="icon">
+
+<div class="card"
+onclick="openConfig('Blitz Boost')">
+
+<div class="card-icon">
 ⚡
 </div>
+
 
 <h3>
 Blitz Boost
@@ -661,22 +723,13 @@ Blitz Boost
 
 
 <p>
-Rated Blitz Wins
-<br>
-Fast Rewards
+Rated Battleground Blitz
 </p>
 
 
-<div class="gold-price">
-
-From $50
-
-</div>
-
-
-<a href="https://discord.gg/S7vr7fjF8">
-ORDER
-</a>
+<button>
+CONFIGURE
+</button>
 
 
 </div>
@@ -686,9 +739,12 @@ ORDER
 
 
 
-<div class="game-card">
 
-<div class="icon">
+
+<div class="card"
+onclick="openConfig('RBG Boost')">
+
+<div class="card-icon">
 🛡️
 </div>
 
@@ -699,22 +755,13 @@ RBG Boost
 
 
 <p>
-Team Rating Push
-<br>
-Weekly Rewards
+Team Rating Progress
 </p>
 
 
-<div class="gold-price">
-
-From $120
-
-</div>
-
-
-<a href="https://discord.gg/S7vr7fjF8">
-ORDER
-</a>
+<button>
+CONFIGURE
+</button>
 
 
 </div>
@@ -724,9 +771,12 @@ ORDER
 
 
 
-<div class="game-card">
 
-<div class="icon">
+
+<div class="card"
+onclick="openConfig('Gladiator Push')">
+
+<div class="card-icon">
 👑
 </div>
 
@@ -737,22 +787,13 @@ Gladiator Push
 
 
 <p>
-High Rating
-<br>
-Elite PvP Team
+Elite PvP Achievement
 </p>
 
 
-<div class="gold-price">
-
-From $200
-
-</div>
-
-
-<a href="https://discord.gg/S7vr7fjF8">
-ORDER
-</a>
+<button>
+CONFIGURE
+</button>
 
 
 </div>
@@ -762,9 +803,11 @@ ORDER
 
 
 
-<div class="game-card">
 
-<div class="icon">
+<div class="card"
+onclick="openConfig('Coaching')">
+
+<div class="card-icon">
 🎓
 </div>
 
@@ -776,21 +819,12 @@ Coaching
 
 <p>
 Improve your gameplay
-<br>
-Play with experienced players
 </p>
 
 
-<div class="gold-price">
-
-$25 / hour
-
-</div>
-
-
-<a href="https://discord.gg/S7vr7fjF8">
-ORDER
-</a>
+<button>
+CONFIGURE
+</button>
 
 
 </div>
@@ -800,9 +834,11 @@ ORDER
 
 
 
-<div class="game-card">
 
-<div class="icon">
+<div class="card"
+onclick="openConfig('Gear Boost')">
+
+<div class="card-icon">
 ⚙️
 </div>
 
@@ -813,24 +849,13 @@ Gear Boost
 
 
 <p>
-Honor Gear
-<br>
-Conquest Gear
-<br>
-BiS Setup
+Honor / Conquest Gear
 </p>
 
 
-<div class="gold-price">
-
-From $40
-
-</div>
-
-
-<a href="https://discord.gg/S7vr7fjF8">
-ORDER
-</a>
+<button>
+CONFIGURE
+</button>
 
 
 </div>
@@ -847,20 +872,23 @@ ORDER
 
 
 
+
 <style>
 
 
 .services{
 
 
-max-width:1300px;
+max-width:1400px;
 
 margin:auto;
 
-padding:80px 40px;
+padding:80px 50px;
 
 
 }
+
+
 
 
 
@@ -869,16 +897,22 @@ padding:80px 40px;
 
 text-align:center;
 
-font-size:45px;
 
-color:#ffd369;
+font-size:42px;
+
 
 margin-bottom:50px;
 
 
+color:#ffd369;
+
+
+font-weight:900;
+
+
 text-shadow:
 
-0 0 20px #ff9900;
+0 0 25px rgba(255,200,70,.5);
 
 
 }
@@ -887,7 +921,7 @@ text-shadow:
 
 
 
-.game-grid{
+.cards{
 
 
 display:grid;
@@ -907,7 +941,7 @@ gap:30px;
 
 
 
-.game-card{
+.card{
 
 
 background:
@@ -917,9 +951,9 @@ linear-gradient(
 
 145deg,
 
-rgba(25,30,55,.95),
+rgba(25,32,60,.95),
 
-rgba(5,5,15,.95)
+rgba(5,7,15,.95)
 
 );
 
@@ -927,18 +961,29 @@ rgba(5,5,15,.95)
 
 border:
 
-2px solid rgba(255,211,105,.35);
+1px solid rgba(255,211,105,.35);
 
 
 
-border-radius:25px;
+border-radius:24px;
 
 
 padding:35px;
 
 
-
 text-align:center;
+
+
+cursor:pointer;
+
+
+transition:.35s;
+
+
+box-shadow:
+
+
+0 20px 50px rgba(0,0,0,.45);
 
 
 
@@ -948,25 +993,13 @@ position:relative;
 overflow:hidden;
 
 
-
-transition:.4s;
-
-
-
-box-shadow:
-
-
-0 20px 40px rgba(0,0,0,.5);
-
-
-
 }
 
 
 
 
 
-.game-card:before{
+.card::before{
 
 
 content:"";
@@ -978,16 +1011,17 @@ position:absolute;
 top:0;
 
 
-left:-120%;
+left:-100%;
 
 
-width:120%;
+width:100%;
 
 
 height:3px;
 
 
 background:
+
 
 linear-gradient(
 
@@ -1004,10 +1038,20 @@ transparent
 );
 
 
-
 transition:.5s;
 
 
+}
+
+
+
+
+
+.card:hover::before{
+
+
+left:100%;
+
 
 }
 
@@ -1015,37 +1059,19 @@ transition:.5s;
 
 
 
-.game-card:hover:before{
+.card:hover{
 
 
-left:120%;
-
-
-}
-
-
-
-
-
-.game-card:hover{
-
-
-transform:
-
-translateY(-15px);
-
+transform:translateY(-12px);
 
 
 border-color:#ffd369;
 
 
-
 box-shadow:
 
 
-0 0 35px rgba(0,170,255,.4),
-0 0 50px rgba(255,211,105,.25);
-
+0 0 40px rgba(0,170,255,.25);
 
 
 }
@@ -1054,9 +1080,7 @@ box-shadow:
 
 
 
-
-
-.icon{
+.card-icon{
 
 
 font-size:65px;
@@ -1065,17 +1089,16 @@ font-size:65px;
 margin-bottom:20px;
 
 
-
 }
 
 
 
 
 
-.game-card h3{
+.card h3{
 
 
-font-size:28px;
+font-size:27px;
 
 
 color:#ffd369;
@@ -1084,41 +1107,22 @@ color:#ffd369;
 margin-bottom:15px;
 
 
-
 }
 
 
 
 
 
-.game-card p{
+.card p{
 
 
-color:#bbb;
+color:#aab0c0;
 
 
-line-height:1.7;
+font-size:16px;
 
 
-}
-
-
-
-
-
-.gold-price{
-
-
-margin-top:25px;
-
-
-font-size:30px;
-
-
-font-weight:900;
-
-
-color:#00ff88;
+margin-bottom:25px;
 
 
 }
@@ -1127,16 +1131,16 @@ color:#00ff88;
 
 
 
-.game-card a{
+.card button{
 
 
-display:inline-block;
+padding:13px 35px;
 
 
-margin-top:25px;
+border:0;
 
 
-padding:12px 35px;
+border-radius:12px;
 
 
 background:#ffd369;
@@ -1145,72 +1149,106 @@ background:#ffd369;
 color:#111;
 
 
-border-radius:12px;
-
-
 font-weight:900;
 
 
-text-decoration:none;
+cursor:pointer;
 
 
 }
 
 
 
-
-
 </style>
-<section class="calculator-section">
 
 
-<h2 class="section-title">
 
-⚔️ ARENA PRICE CALCULATOR
+
+
+
+
+<script>
+
+
+function openConfig(service){
+
+
+console.log(service);
+
+
+}
+
+</script>
+<!-- ORDER CONFIGURATOR -->
+
+<div class="modal" id="orderModal">
+
+
+<div class="configurator">
+
+
+
+<button class="close"
+onclick="closeConfig()">
+
+✕
+
+</button>
+
+
+
+<h2 id="serviceName">
+
+Arena Boost
 
 </h2>
 
 
+<p class="desc">
 
+Configure your order
 
-<div class="calculator-box">
-
-
-<h3>
-Arena Type
-</h3>
-
-
-<select id="arenaType">
-
-<option value="1">
-
-2v2 Arena
-
-</option>
-
-
-<option value="1.25">
-
-3v3 Arena
-
-</option>
-
-
-</select>
+</p>
 
 
 
 
 
-<h3>
-Current Rating
-</h3>
+<h3>Boost Method</h3>
+
+
+<div class="choice">
+
+
+<button onclick="selectMethod(1)">
+🟢 Self Play
+</button>
+
+
+<button onclick="selectMethod(1.15)">
+🔵 Parsec
+</button>
+
+
+<button onclick="selectMethod(1.35)">
+🟣 Pilot
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<h3>Current Rating</h3>
 
 
 <input 
+id="current"
 type="range"
-id="arenaCurrent"
 min="0"
 max="2400"
 step="100"
@@ -1218,149 +1256,10 @@ value="0">
 
 
 
-<div class="rating">
+<div class="info">
 
 Current:
-<span id="arenaCurrentValue">
-0
-</span>
-
-</div>
-
-
-
-
-
-<h3>
-Target Rating
-</h3>
-
-
-<input 
-type="range"
-id="arenaTarget"
-min="1400"
-max="3000"
-step="100"
-value="1800">
-
-
-
-<div class="rating">
-
-Target:
-<span id="arenaTargetValue">
-1800
-</span>
-
-</div>
-
-
-
-
-
-<h3>
-Mode
-</h3>
-
-
-
-<select id="arenaMode">
-
-
-<option value="1">
-
-Self Play
-
-</option>
-
-
-
-<option value="1.4">
-
-Piloted
-
-</option>
-
-
-
-</select>
-
-
-
-
-
-
-<div class="final-price">
-
-
-$<span id="arenaPrice">
-
-140
-
-</span>
-
-
-</div>
-
-
-
-<a class="order-btn"
-
-href="https://discord.gg/S7vr7fjF8">
-
-ORDER ARENA
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="calculator-section">
-
-
-<h2 class="section-title">
-
-⚡ BLITZ PRICE CALCULATOR
-
-</h2>
-
-
-
-
-<div class="calculator-box">
-
-
-<h3>
-Current Rating
-</h3>
-
-
-<input 
-type="range"
-id="blitzCurrent"
-min="0"
-max="2400"
-step="100"
-value="0">
-
-
-
-<div class="rating">
-
-Current:
-<span id="blitzCurrentValue">
+<span id="currentText">
 0
 </span>
 
@@ -1371,14 +1270,13 @@ Current:
 
 
 
-<h3>
-Target Rating
-</h3>
+
+<h3>Target Rating</h3>
 
 
 <input 
+id="target"
 type="range"
-id="blitzTarget"
 min="1400"
 max="3000"
 step="100"
@@ -1386,10 +1284,10 @@ value="1800">
 
 
 
-<div class="rating">
+<div class="info">
 
 Target:
-<span id="blitzTargetValue">
+<span id="targetText">
 1800
 </span>
 
@@ -1399,14 +1297,22 @@ Target:
 
 
 
-<div class="final-price">
 
 
-$<span id="blitzPrice">
+<div class="total">
 
-120
+
+TOTAL
+
+
+<strong>
+
+$<span id="price">
+150
 
 </span>
+
+</strong>
 
 
 </div>
@@ -1414,22 +1320,22 @@ $<span id="blitzPrice">
 
 
 
-<a class="order-btn"
+
+<a class="discord-order"
 
 href="https://discord.gg/S7vr7fjF8">
 
-ORDER BLITZ
+ORDER ON DISCORD
 
 </a>
 
 
 
+
 </div>
 
 
-</section>
-
-
+</div>
 
 
 
@@ -1440,14 +1346,28 @@ ORDER BLITZ
 <style>
 
 
-.calculator-section{
+.modal{
 
 
-max-width:900px;
+display:none;
 
-margin:auto;
 
-padding:70px 30px;
+position:fixed;
+
+
+inset:0;
+
+
+background:rgba(0,0,0,.85);
+
+
+z-index:999;
+
+
+align-items:center;
+
+
+justify-content:center;
 
 
 }
@@ -1456,18 +1376,25 @@ padding:70px 30px;
 
 
 
-.calculator-box{
+.configurator{
+
+
+width:520px;
+
+
+max-width:90%;
 
 
 background:
+
 
 linear-gradient(
 
 145deg,
 
-rgba(20,25,50,.95),
+#151a35,
 
-rgba(5,5,10,.95)
+#05060d
 
 );
 
@@ -1475,21 +1402,23 @@ rgba(5,5,10,.95)
 
 border:
 
-2px solid rgba(255,211,105,.4);
-
+2px solid #ffd369;
 
 
 border-radius:25px;
 
 
-padding:40px;
+padding:35px;
 
 
 box-shadow:
 
 
-0 0 40px rgba(0,170,255,.15);
+0 0 80px rgba(0,140,255,.4);
 
+
+
+position:relative;
 
 
 }
@@ -1498,12 +1427,67 @@ box-shadow:
 
 
 
-.calculator-box h3{
+.close{
+
+
+position:absolute;
+
+
+right:20px;
+
+
+top:15px;
+
+
+background:none;
+
+
+border:0;
+
+
+color:white;
+
+
+font-size:25px;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+.configurator h2{
+
+
+text-align:center;
+
+
+font-size:34px;
 
 
 color:#ffd369;
 
-margin-top:20px;
+
+}
+
+
+
+
+
+.desc{
+
+
+text-align:center;
+
+
+color:#aaa;
+
+
+margin:10px;
 
 
 }
@@ -1512,10 +1496,75 @@ margin-top:20px;
 
 
 
-select,
+.configurator h3{
 
 
-input[type="range"]{
+margin-top:25px;
+
+
+}
+
+
+
+
+
+.choice{
+
+
+display:flex;
+
+
+gap:10px;
+
+
+margin-top:15px;
+
+
+}
+
+
+
+.choice button{
+
+
+flex:1;
+
+
+padding:15px;
+
+
+background:#090b16;
+
+
+border:1px solid #008cff;
+
+
+color:white;
+
+
+border-radius:12px;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+.choice button:hover{
+
+
+border-color:#ffd369;
+
+
+}
+
+
+
+
+
+input{
 
 
 width:100%;
@@ -1528,48 +1577,20 @@ margin-top:15px;
 
 
 
-
-select{
-
-
-background:#111;
+.info{
 
 
-color:white;
-
-
-padding:15px;
-
-
-border-radius:10px;
-
-
-border:1px solid #ffd369;
-
-
-}
-
-
-
-
-.rating{
-
-
-margin-top:15px;
+margin-top:10px;
 
 
 color:#aaa;
 
 
-font-size:18px;
-
-
 }
 
 
 
-
-.rating span{
+.info span{
 
 
 color:#00aaff;
@@ -1583,29 +1604,33 @@ font-weight:bold;
 
 
 
-.final-price{
 
-
-margin-top:35px;
-
-
-font-size:50px;
-
-
-font-weight:900;
-
-
-color:#00ff88;
+.total{
 
 
 text-align:center;
 
 
-text-shadow:
+margin-top:35px;
 
 
-0 0 20px #00ff88;
+font-size:22px;
 
+
+}
+
+
+
+.total strong{
+
+
+display:block;
+
+
+font-size:55px;
+
+
+color:#00ff88;
 
 
 }
@@ -1613,8 +1638,7 @@ text-shadow:
 
 
 
-
-.order-btn{
+.discord-order{
 
 
 display:block;
@@ -1623,22 +1647,23 @@ display:block;
 text-align:center;
 
 
-margin-top:30px;
+padding:16px;
 
 
-padding:15px;
+margin-top:25px;
 
 
 background:
 
+
 linear-gradient(
 90deg,
 #5865F2,
-#00aaff
+#008cff
 );
 
 
-border-radius:12px;
+border-radius:14px;
 
 
 color:white;
@@ -1653,11 +1678,7 @@ text-decoration:none;
 }
 
 
-
-
-
 </style>
-
 
 
 
@@ -1668,55 +1689,28 @@ text-decoration:none;
 <script>
 
 
-function arenaPriceCalc(){
+let methodMultiplier = 1;
 
-
-let current =
-Number(document.getElementById("arenaCurrent").value);
-
-
-let target =
-Number(document.getElementById("arenaTarget").value);
-
-
-let type =
-Number(document.getElementById("arenaType").value);
-
-
-let mode =
-Number(document.getElementById("arenaMode").value);
+let currentService = "";
 
 
 
-let price =
-((target-current)/12)+40;
+
+function openConfig(service){
 
 
-
-if(price<40){
-
-price=40;
-
-}
+currentService = service;
 
 
-
-price = price * type * mode;
-
-
-
-document.getElementById("arenaPrice").innerText =
-Math.round(price);
+document.getElementById("serviceName")
+.innerText = service;
 
 
+document.getElementById("orderModal")
+.style.display="flex";
 
-document.getElementById("arenaCurrentValue").innerText =
-current;
 
-
-document.getElementById("arenaTargetValue").innerText =
-target;
-
+calculate();
 
 
 }
@@ -1725,43 +1719,53 @@ target;
 
 
 
-document.querySelectorAll(
-"#arenaCurrent,#arenaTarget,#arenaType,#arenaMode"
-)
-.forEach(e=>{
-
-e.addEventListener("input",arenaPriceCalc);
-
-e.addEventListener("change",arenaPriceCalc);
-
-});
+function closeConfig(){
 
 
+document.getElementById("orderModal")
+.style.display="none";
 
-arenaPriceCalc();
+
+}
 
 
 
 
 
 
+function selectMethod(value){
 
-function blitzPriceCalc(){
+
+methodMultiplier=value;
+
+
+calculate();
+
+
+}
+
+
+
+
+
+
+function calculate(){
+
 
 
 let current =
-Number(document.getElementById("blitzCurrent").value);
+Number(document.getElementById("current").value);
 
 
 
 let target =
-Number(document.getElementById("blitzTarget").value);
-
+Number(document.getElementById("target").value);
 
 
 
 let price =
-((target-current)/14)+50;
+
+((target-current)/10)+50;
 
 
 
@@ -1773,577 +1777,21 @@ price=50;
 
 
 
+price*=methodMultiplier;
 
-document.getElementById("blitzPrice").innerText =
-Math.round(price);
 
 
-
-document.getElementById("blitzCurrentValue").innerText =
-current;
-
-
-document.getElementById("blitzTargetValue").innerText =
-target;
-
-
-
-}
-
-
-
-
-
-document.querySelectorAll(
-"#blitzCurrent,#blitzTarget"
-)
-.forEach(e=>{
-
-
-e.addEventListener(
-"input",
-blitzPriceCalc
-);
-
-
-});
-
-
-
-blitzPriceCalc();
-
-
-
-</script>
-<section class="calculator-section">
-
-
-<h2 class="section-title">
-
-👑 GLADIATOR PUSH
-
-</h2>
-
-
-
-
-<div class="calculator-box">
-
-
-<h3>
-Choose Goal
-</h3>
-
-
-
-<select id="gladiator">
-
-
-<option value="250">
-
-2100 Rating
-
-</option>
-
-
-
-<option value="450">
-
-2400 Rating
-
-</option>
-
-
-
-<option value="750">
-
-Gladiator Title
-
-</option>
-
-
-
-</select>
-
-
-
-
-
-<div class="final-price">
-
-$<span id="gladPrice">
-
-250
-
-</span>
-
-</div>
-
-
-
-
-
-<a class="order-btn"
-
-href="https://discord.gg/S7vr7fjF8">
-
-ORDER GLADIATOR
-
-</a>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="calculator-section">
-
-
-<h2 class="section-title">
-
-🛡 RBG BOOST
-
-</h2>
-
-
-
-
-<div class="calculator-box">
-
-
-<h3>
-Current Rating
-</h3>
-
-
-
-<input
-
-type="range"
-
-id="rbgCurrent"
-
-min="0"
-
-max="2400"
-
-step="100"
-
-value="0"
-
->
-
-
-
-
-<div class="rating">
-
-Current:
-
-<span id="rbgCurrentValue">
-
-0
-
-</span>
-
-</div>
-
-
-
-
-
-
-<h3>
-
-Target Rating
-
-</h3>
-
-
-
-<input
-
-type="range"
-
-id="rbgTarget"
-
-min="1400"
-
-max="3000"
-
-step="100"
-
-value="1800"
-
->
-
-
-
-
-<div class="rating">
-
-Target:
-
-<span id="rbgTargetValue">
-
-1800
-
-</span>
-
-</div>
-
-
-
-
-
-<div class="final-price">
-
-$<span id="rbgPrice">
-
-150
-
-</span>
-
-</div>
-
-
-
-
-
-<a class="order-btn"
-
-href="https://discord.gg/S7vr7fjF8">
-
-ORDER RBG
-
-</a>
-
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="services">
-
-
-<h2 class="section-title">
-
-💎 CRYPTO PAYMENTS
-
-</h2>
-
-
-
-<div class="game-grid">
-
-
-
-<div class="game-card">
-
-<div class="icon">
-
-₿
-
-</div>
-
-<h3>
-
-Bitcoin
-
-</h3>
-
-<p>
-
-Fast cryptocurrency payments.
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="game-card">
-
-<div class="icon">
-
-💵
-
-</div>
-
-<h3>
-
-USDT
-
-</h3>
-
-<p>
-
-TRC20 / ERC20 supported.
-
-</p>
-
-</div>
-
-
-
-
-
-
-
-<div class="game-card">
-
-<div class="icon">
-
-Ł
-
-</div>
-
-<h3>
-
-Litecoin
-
-</h3>
-
-<p>
-
-Low fee transfers.
-
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="services">
-
-
-<h2 class="section-title">
-
-⭐ WHY SONY BOOST
-
-</h2>
-
-
-
-
-
-<div class="game-grid">
-
-
-
-
-
-<div class="game-card">
-
-<div class="icon">
-
-⚔️
-
-</div>
-
-
-<h3>
-
-Experienced Players
-
-</h3>
-
-
-<p>
-
-Skilled PvP players with competitive experience.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="game-card">
-
-<div class="icon">
-
-⚡
-
-</div>
-
-
-<h3>
-
-Fast Delivery
-
-</h3>
-
-
-<p>
-
-Quick communication and smooth boosting.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="game-card">
-
-<div class="icon">
-
-🛡️
-
-</div>
-
-
-<h3>
-
-Safe Service
-
-</h3>
-
-
-<p>
-
-Professional approach to every customer.
-
-</p>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<script>
-
-
-document.getElementById("gladiator")
-.addEventListener("change",function(){
-
-
-document.getElementById("gladPrice")
-.innerText=this.value;
-
-
-
-});
-
-
-
-
-
-
-
-function rbgCalc(){
-
-
-
-let current=
-
-Number(document.getElementById("rbgCurrent").value);
-
-
-
-let target=
-
-Number(document.getElementById("rbgTarget").value);
-
-
-
-
-
-let price=
-
-((target-current)/10)+70;
-
-
-
-
-if(price<70){
-
-price=70;
-
-}
-
-
-
-
-
-document.getElementById("rbgPrice")
+document.getElementById("price")
 .innerText=Math.round(price);
 
 
 
-
-document.getElementById("rbgCurrentValue")
+document.getElementById("currentText")
 .innerText=current;
 
 
 
-
-document.getElementById("rbgTargetValue")
+document.getElementById("targetText")
 .innerText=target;
 
 
@@ -2354,202 +1802,408 @@ document.getElementById("rbgTargetValue")
 
 
 
-
-document.querySelectorAll(
-
-"#rbgCurrent,#rbgTarget"
-
-)
-
-.forEach(e=>{
-
-
-e.addEventListener(
-"input",
-rbgCalc
-);
+document.getElementById("current")
+.addEventListener("input",calculate);
 
 
 
-});
-
-
-
-rbgCalc();
+document.getElementById("target")
+.addEventListener("input",calculate);
 
 
 
 </script>
-<section class="hero final-hero">
+<script>
 
 
-<div>
+const boostPrices = {
 
 
-<div class="logo">
+"Arena Boost":{
 
-SONY
+description:
+"Professional Arena rating push. Choose your bracket and method.",
 
-<span>
-BOOST
-</span>
-
-</div>
+base:80
 
 
-
-<h1>
-
-Become a PvP Legend
-
-</h1>
+},
 
 
+"Blitz Boost":{
 
-<p>
+description:
+"Rated Blitz wins and rating progression.",
 
-Reach your rating goals with SONY BOOST.
-Your path to Gladiator starts here.
-
-</p>
-
+base:60
 
 
-<a class="btn"
-
-href="https://discord.gg/S7vr7fjF8">
-
-START BOOST
-
-</a>
+},
 
 
-</div>
+"RBG Boost":{
+
+description:
+"Team rated battleground progression.",
+
+base:120
+
+
+},
+
+
+"Gladiator Push":{
+
+description:
+"High rating push with experienced players.",
+
+base:250
+
+
+},
+
+
+"Coaching":{
+
+description:
+"Learn PvP with experienced players.",
+
+base:30
+
+
+},
+
+
+"Gear Boost":{
+
+description:
+"Fast Honor and Conquest gearing.",
+
+base:50
+
+
+}
+
+
+};
 
 
 
 
 
-<div class="hero-character">
-
-⚡🦔⚔️
-
-</div>
+function openConfig(service){
 
 
-
-</section>
+currentService = service;
 
 
 
+document.getElementById("serviceName")
+.innerText = service;
+
+
+
+document.querySelector(".desc")
+.innerText =
+boostPrices[service].description;
+
+
+
+document.getElementById("orderModal")
+.style.display="flex";
+
+
+
+calculate();
+
+
+
+}
 
 
 
 
 
 
-<section class="services">
+
+function calculate(){
+
+
+
+let current =
+
+Number(
+document.getElementById("current").value
+);
+
+
+
+let target =
+
+Number(
+document.getElementById("target").value
+);
+
+
+
+
+let data = boostPrices[currentService];
+
+
+
+let difference = target-current;
+
+
+
+if(difference<0){
+
+difference=0;
+
+}
+
+
+
+
+
+let price =
+
+data.base + (difference/10);
+
+
+
+
+
+price *= methodMultiplier;
+
+
+
+document.getElementById("price")
+.innerText =
+Math.round(price);
+
+
+
+document.getElementById("currentText")
+.innerText=current;
+
+
+
+document.getElementById("targetText")
+.innerText=target;
+
+
+}
+
+
+
+</script>
+<section class="extra">
 
 
 <h2 class="section-title">
 
-💬 CUSTOMER REVIEWS
+💎 WHY SONY BOOST
 
 </h2>
 
 
 
-<div class="game-grid">
+<div class="extra-grid">
 
 
 
-<div class="game-card">
+<div class="extra-card">
 
+<h3>
+⚔️ Experienced Players
+</h3>
 
-<div class="icon">
-
-⭐⭐⭐⭐⭐
+<p>
+Professional PvP players helping you reach your goals.
+</p>
 
 </div>
 
 
+
+
+
+<div class="extra-card">
+
 <h3>
+⚡ Fast Delivery
+</h3>
 
-Fast Service
+<p>
+Quick communication and smooth boosting process.
+</p>
 
+</div>
+
+
+
+
+
+
+<div class="extra-card">
+
+<h3>
+🛡 Safe Service
+</h3>
+
+<p>
+Reliable and transparent boosting experience.
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="extra">
+
+
+<h2 class="section-title">
+
+💰 PAYMENT METHODS
+
+</h2>
+
+
+
+<div class="extra-grid">
+
+
+
+<div class="extra-card">
+
+<h3>
+₿ Bitcoin
+</h3>
+
+<p>
+Crypto payments available.
+</p>
+
+</div>
+
+
+
+<div class="extra-card">
+
+<h3>
+💵 USDT
+</h3>
+
+<p>
+Fast stablecoin payments.
+</p>
+
+</div>
+
+
+
+<div class="extra-card">
+
+<h3>
+💎 Litecoin
+</h3>
+
+<p>
+Low fee transactions.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="extra">
+
+
+<h2 class="section-title">
+
+⭐ REVIEWS
+
+</h2>
+
+
+
+<div class="extra-grid">
+
+
+<div class="extra-card">
+
+
+<h3>
+⭐⭐⭐⭐⭐
 </h3>
 
 
 <p>
-
-"Great communication and fast rating push!"
-
+"Fast service and great communication."
 </p>
 
 
-
 </div>
 
 
 
 
 
-
-<div class="game-card">
-
-
-<div class="icon">
-
-⭐⭐⭐⭐⭐
-
-</div>
+<div class="extra-card">
 
 
 <h3>
-
-Professional Team
-
+⭐⭐⭐⭐⭐
 </h3>
 
 
 <p>
-
-"Experienced players. Easy process."
-
+"Reached my rating goal easily."
 </p>
 
 
-
 </div>
 
 
 
 
 
-
-<div class="game-card">
-
-
-<div class="icon">
-
-⭐⭐⭐⭐⭐
-
-</div>
+<div class="extra-card">
 
 
 <h3>
-
-Amazing Result
-
+⭐⭐⭐⭐⭐
 </h3>
 
 
 <p>
-
-"Reached my goal faster than expected."
-
+"Professional PvP players."
 </p>
-
 
 
 </div>
@@ -2569,7 +2223,7 @@ Amazing Result
 
 
 
-<section class="services">
+<section class="extra">
 
 
 <h2 class="section-title">
@@ -2580,27 +2234,35 @@ Amazing Result
 
 
 
-
-<div class="game-grid">
-
+<div class="extra-grid">
 
 
-<div class="game-card">
 
+<div class="extra-card">
 
 <h3>
-
 How to order?
-
 </h3>
 
-
 <p>
-
-Choose your service and contact us on Discord.
-
+Choose service, configure it and contact Discord.
 </p>
 
+</div>
+
+
+
+
+
+<div class="extra-card">
+
+<h3>
+Self Play or Pilot?
+</h3>
+
+<p>
+Both options are available.
+</p>
 
 </div>
 
@@ -2609,71 +2271,15 @@ Choose your service and contact us on Discord.
 
 
 
-<div class="game-card">
-
-
-<h3>
-
-How long does it take?
-
-</h3>
-
-
-<p>
-
-Depends on rating and selected boost.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="game-card">
-
+<div class="extra-card">
 
 <h3>
-
-Can I play myself?
-
-</h3>
-
-
-<p>
-
-Yes. Self Play options are available.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="game-card">
-
-
-<h3>
-
 Payment?
-
 </h3>
 
-
 <p>
-
 Crypto payments supported.
-
 </p>
-
 
 </div>
 
@@ -2684,8 +2290,6 @@ Crypto payments supported.
 
 
 </section>
-
-
 
 
 
@@ -2710,22 +2314,11 @@ World of Warcraft Premium PvP Boosting
 </p>
 
 
-<br>
-
-
 <a href="https://discord.gg/S7vr7fjF8">
 
-Discord: Join Server
+JOIN DISCORD
 
 </a>
-
-
-
-<p>
-
-© 2026 SONY BOOST
-
-</p>
 
 
 
@@ -2737,14 +2330,129 @@ Discord: Join Server
 
 
 
-
 <style>
 
 
-.final-hero{
+.extra{
 
 
-margin-top:50px;
+max-width:1400px;
+
+
+margin:auto;
+
+
+padding:70px 50px;
+
+
+}
+
+
+
+
+.extra-grid{
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(280px,1fr));
+
+
+gap:30px;
+
+
+}
+
+
+
+
+
+.extra-card{
+
+
+background:
+
+
+linear-gradient(
+
+145deg,
+
+rgba(20,25,50,.95),
+
+rgba(5,5,12,.95)
+
+);
+
+
+
+border:
+
+1px solid rgba(255,211,105,.3);
+
+
+
+border-radius:22px;
+
+
+padding:30px;
+
+
+text-align:center;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+.extra-card:hover{
+
+
+transform:translateY(-10px);
+
+
+border-color:#ffd369;
+
+
+box-shadow:
+
+0 0 30px rgba(0,170,255,.25);
+
+
+}
+
+
+
+
+
+.extra-card h3{
+
+
+color:#ffd369;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+
+.extra-card p{
+
+
+color:#aab0c0;
+
+
+line-height:1.6;
 
 
 }
@@ -2756,63 +2464,67 @@ margin-top:50px;
 footer{
 
 
-text-align:center;
+margin-top:50px;
 
 
 padding:60px 20px;
 
 
-background:
-
-rgba(0,0,0,.4);
+text-align:center;
 
 
+background:rgba(0,0,0,.35);
 
-border-top:
 
-1px solid rgba(255,211,105,.3);
-
+border-top:1px solid rgba(255,211,105,.2);
 
 
 }
+
 
 
 
 footer h2{
 
 
-color:#ffd369;
-
-
 font-size:35px;
 
 
-text-shadow:
-
-0 0 20px #ff9900;
-
+color:#ffd369;
 
 
 }
-
 
 
 
 footer a{
 
 
-color:#00aaff;
+display:inline-block;
+
+
+margin-top:20px;
+
+
+color:white;
+
+
+background:#5865F2;
+
+
+padding:15px 40px;
+
+
+border-radius:12px;
 
 
 text-decoration:none;
 
 
-font-weight:bold;
-
+font-weight:900;
 
 
 }
-
 
 
 
