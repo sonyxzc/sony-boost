@@ -25,19 +25,90 @@ font-family:'Inter',sans-serif;
 body{
 
 background:
-linear-gradient(
-rgba(4,4,12,.88),
-rgba(4,4,12,.95)
-),
-url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23");
 
-background-size:cover;
+radial-gradient(
+circle at 20% 20%,
+rgba(0,140,255,0.25),
+transparent 35%
+),
+
+radial-gradient(
+circle at 80% 30%,
+rgba(255,210,50,0.18),
+transparent 30%
+),
+
+linear-gradient(
+135deg,
+#050510,
+#0b1025,
+#020208
+);
+
+
 background-attachment:fixed;
 
 color:white;
 
+overflow-x:hidden;
+
 }
 
+
+
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-200px;
+
+left:-200px;
+
+width:600px;
+
+height:600px;
+
+
+background:
+
+radial-gradient(
+circle,
+rgba(0,150,255,.35),
+transparent 70%
+);
+
+
+filter:blur(80px);
+
+animation:moveLight 8s infinite alternate;
+
+z-index:-1;
+
+}
+
+
+
+@keyframes moveLight{
+
+
+from{
+
+transform:translate(0,0);
+
+}
+
+
+to{
+
+transform:translate(300px,200px);
+
+}
+
+
+}
 
 
 /* HEADER */
