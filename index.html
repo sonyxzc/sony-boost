@@ -6,14 +6,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SONY BOOST | World of Warcraft Boosting</title>
+<title>SONY BOOST | WoW Boosting</title>
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 
 <style>
-
 
 *{
 margin:0;
@@ -27,11 +26,10 @@ body{
 
 background:
 linear-gradient(
-rgba(5,5,15,0.85),
-rgba(5,5,15,0.95)
+rgba(4,4,12,.88),
+rgba(4,4,12,.95)
 ),
 url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23");
-
 
 background-size:cover;
 background-attachment:fixed;
@@ -42,34 +40,36 @@ color:white;
 
 
 
-/* NAVIGATION */
+/* HEADER */
 
-
-nav{
+header{
 
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:20px 50px;
+padding:25px 60px;
 
-max-width:1200px;
+max-width:1300px;
 
 margin:auto;
 
 }
 
 
+
 .brand{
 
-font-size:26px;
+font-size:32px;
+
 font-weight:900;
 
 color:#ffd369;
 
-letter-spacing:1px;
+letter-spacing:2px;
 
 }
+
 
 
 nav a{
@@ -95,14 +95,31 @@ color:#ffd369;
 
 
 
+
 /* HERO */
 
 
 .hero{
 
-text-align:center;
+max-width:1200px;
 
-padding:70px 20px 50px;
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:90px 30px;
+
+}
+
+
+
+.hero-text{
+
+max-width:600px;
 
 }
 
@@ -110,19 +127,15 @@ padding:70px 20px 50px;
 
 .logo{
 
-font-size:65px;
+font-size:75px;
 
 font-weight:900;
 
-letter-spacing:4px;
-
 color:#ffd369;
-
 
 text-shadow:
 
-0 0 10px #ffd369,
-0 0 30px #ff8c00;
+0 0 15px #ff9900;
 
 }
 
@@ -132,9 +145,9 @@ text-shadow:
 
 display:block;
 
-font-size:38px;
+font-size:45px;
 
-letter-spacing:12px;
+letter-spacing:15px;
 
 color:white;
 
@@ -144,38 +157,40 @@ color:white;
 
 .hero h1{
 
+font-size:35px;
+
 margin-top:25px;
 
-font-size:30px;
-
 }
+
 
 
 .hero p{
 
-margin-top:15px;
-
 font-size:18px;
 
-color:#cfcfcf;
+color:#bbb;
+
+margin-top:20px;
+
+line-height:1.6;
 
 }
 
 
 
 
-.discord-btn{
-
+.btn{
 
 display:inline-block;
 
 margin-top:35px;
 
-padding:15px 40px;
+padding:16px 45px;
 
 background:#5865F2;
 
-border-radius:12px;
+border-radius:14px;
 
 color:white;
 
@@ -189,7 +204,7 @@ transition:.3s;
 
 
 
-.discord-btn:hover{
+.btn:hover{
 
 transform:scale(1.05);
 
@@ -198,120 +213,100 @@ transform:scale(1.05);
 
 
 
-
-/* CONTAINER */
-
-
-.container{
-
-max-width:1200px;
-
-margin:auto;
-
-padding:30px;
-
-}
+/* SONIC BOX */
 
 
+.sonic-box{
 
-.section-title{
+width:350px;
 
-text-align:center;
+height:350px;
 
-font-size:32px;
-
-font-weight:900;
-
-color:#ffd369;
-
-margin:60px 0 30px;
-
-}
-
-
-
-/* CARDS */
-
-
-.cards{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
-}
-
-
-
-.card{
+border-radius:30px;
 
 background:
 
 linear-gradient(
 145deg,
 #171717,
-#090909
+#080808
 );
 
 
-border:1px solid #333;
+border:2px solid #ffd369;
 
-border-radius:18px;
+display:flex;
 
-padding:25px;
+align-items:center;
 
-transition:.3s;
+justify-content:center;
 
-}
+font-size:120px;
 
 
+box-shadow:
 
-.card:hover{
-
-transform:translateY(-8px);
-
-border-color:#ffd369;
+0 0 40px rgba(255,211,105,.25);
 
 }
 
 
 
+@media(max-width:800px){
 
-.card h2{
 
-color:#ffd369;
+.hero{
 
-margin-bottom:15px;
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+.sonic-box{
+
+margin-top:40px;
+
+width:280px;
+
+height:280px;
+
+}
+
+
+.logo{
+
+font-size:55px;
 
 }
 
 
 
-.card p{
+header{
 
-color:#ccc;
+padding:20px;
 
-line-height:1.5;
+flex-direction:column;
+
+gap:20px;
 
 }
 
-
-
+}
 
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
-
-<nav>
+<header>
 
 
 <div class="brand">
@@ -321,27 +316,27 @@ line-height:1.5;
 </div>
 
 
-<div>
+
+<nav>
 
 <a href="#services">
 Services
 </a>
 
-
-<a href="#reviews">
-Reviews
+<a href="#prices">
+Prices
 </a>
 
-
-<a href="https://discord.gg/S7vr7fjF8">
+<a href="#contact">
 Discord
 </a>
 
 
-</div>
-
-
 </nav>
+
+
+</header>
+
 
 
 
@@ -350,31 +345,42 @@ Discord
 <section class="hero">
 
 
+<div class="hero-text">
+
+
 <div class="logo">
 
 SONY
 
-<span>BOOST</span>
+<span>
+BOOST
+</span>
 
 </div>
 
 
+
 <h1>
 
-Premium World of Warcraft Boosting
+World of Warcraft Premium Boosting
 
 </h1>
 
 
+
 <p>
 
-Elite players • Fast delivery • Professional service
+Elite PvP players.
+Fast delivery.
+Professional boosting service.
 
 </p>
 
 
 
-<a class="discord-btn"
+
+<a class="btn"
+
 href="https://discord.gg/S7vr7fjF8">
 
 JOIN DISCORD
@@ -382,13 +388,173 @@ JOIN DISCORD
 </a>
 
 
+</div>
+
+
+
+
+
+<div class="sonic-box">
+
+🦔
+
+</div>
+
+
+
 </section>
 <section class="container" id="services">
 
 
-<div class="section-title">
+<style>
+
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:40px 30px;
+
+}
+
+
+
+.title{
+
+text-align:center;
+
+font-size:38px;
+
+font-weight:900;
+
+color:#ffd369;
+
+margin:50px 0 35px;
+
+}
+
+
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(270px,1fr));
+
+gap:25px;
+
+}
+
+
+
+.service-card{
+
+background:
+linear-gradient(
+145deg,
+#171717,
+#090909
+);
+
+
+border:1px solid #333;
+
+border-radius:20px;
+
+padding:30px;
+
+transition:.3s;
+
+}
+
+
+
+.service-card:hover{
+
+transform:translateY(-8px);
+
+border-color:#ffd369;
+
+box-shadow:
+0 0 25px rgba(255,211,105,.2);
+
+}
+
+
+
+.service-card h2{
+
+color:#ffd369;
+
+font-size:25px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.service-card p{
+
+color:#ccc;
+
+line-height:1.6;
+
+}
+
+
+
+.price{
+
+font-size:28px;
+
+font-weight:900;
+
+color:#00ff88;
+
+margin-top:20px;
+
+}
+
+
+
+.small-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 25px;
+
+border-radius:10px;
+
+background:#ffd369;
+
+color:#111;
+
+font-weight:800;
+
+text-decoration:none;
+
+}
+
+
+
+</style>
+
+
+
+
+
+<div class="title">
+
 ⚔️ BOOST SERVICES
+
 </div>
+
 
 
 
@@ -396,22 +562,37 @@ JOIN DISCORD
 
 
 
-<div class="card">
+
+
+<div class="service-card">
+
 
 <h2>
-🏆 Arena Boost
+⚔️ Arena Boost
 </h2>
 
-<p>
-2v2 / 3v3 rating push with experienced PvP players.
-</p>
-
-<br>
 
 <p>
-Starting from:
-<b>$15</b>
+
+2v2 / 3v3 rating push.
+
+Professional PvP players.
+
 </p>
+
+
+<div class="price">
+
+From $90
+
+</div>
+
+
+<a class="small-btn" href="#arena">
+
+CALCULATE
+
+</a>
 
 
 </div>
@@ -420,22 +601,37 @@ Starting from:
 
 
 
-<div class="card">
+
+
+<div class="service-card">
+
 
 <h2>
 ⚡ Blitz Boost
 </h2>
 
-<p>
-Fast rating progression and weekly rewards.
-</p>
-
-<br>
 
 <p>
-Starting from:
-<b>$10</b>
+
+Rated Blitz progression.
+
+Fast wins and rewards.
+
 </p>
+
+
+<div class="price">
+
+From $50
+
+</div>
+
+
+<a class="small-btn" href="#blitz">
+
+CALCULATE
+
+</a>
 
 
 </div>
@@ -445,23 +641,34 @@ Starting from:
 
 
 
-<div class="card">
+
+<div class="service-card">
+
 
 <h2>
 🛡️ RBG Boost
 </h2>
 
+
 <p>
-Team based rated battleground boosting.
+
+Team rated battleground boosting.
+
 </p>
 
 
-<br>
+<div class="price">
 
-<p>
-Starting from:
-<b>$20</b>
-</p>
+From $80
+
+</div>
+
+
+<a class="small-btn" href="#rbg">
+
+CALCULATE
+
+</a>
 
 
 </div>
@@ -472,23 +679,33 @@ Starting from:
 
 
 
-<div class="card">
+<div class="service-card">
+
 
 <h2>
 👑 Gladiator Push
 </h2>
 
+
 <p>
-High rating push with professional players.
+
+High rating push with experienced players.
+
 </p>
 
 
-<br>
+<div class="price">
 
-<p>
-Starting from:
-<b>$100</b>
-</p>
+From $200
+
+</div>
+
+
+<a class="small-btn" href="#gladiator">
+
+CALCULATE
+
+</a>
 
 
 </div>
@@ -499,7 +716,8 @@ Starting from:
 
 
 
-<div class="card">
+<div class="service-card">
+
 
 <h2>
 🎓 Coaching
@@ -507,16 +725,24 @@ Starting from:
 
 
 <p>
+
 Improve your gameplay with personal coaching.
+
 </p>
 
 
-<br>
+<div class="price">
 
-<p>
-Starting from:
-<b>$15/hour</b>
-</p>
+$25 / hour
+
+</div>
+
+
+<a class="small-btn" href="#contact">
+
+ORDER
+
+</a>
 
 
 </div>
@@ -527,7 +753,8 @@ Starting from:
 
 
 
-<div class="card">
+<div class="service-card">
+
 
 <h2>
 ⚙️ Gear Boost
@@ -536,22 +763,29 @@ Starting from:
 
 <p>
 
-Honor Gear<br>
-Conquest Gear<br>
-Best in Slot Gear
+Honor gear.
+Conquest gear.
+BiS gear.
 
 </p>
 
 
-<br>
+<div class="price">
 
-<p>
-Starting from:
-<b>$10</b>
-</p>
+From $30
+
+</div>
+
+
+<a class="small-btn" href="#contact">
+
+ORDER
+
+</a>
 
 
 </div>
+
 
 
 
@@ -559,35 +793,30 @@ Starting from:
 
 
 </section>
-<section class="container">
+<section class="container" id="arena">
 
 
-<div class="section-title">
-
+<div class="title">
 ⚔️ ARENA BOOST CALCULATOR
-
 </div>
 
 
 
-<div class="card calculator">
-
+<div class="service-card calculator">
 
 
 <h2>
-Choose Bracket
+Bracket
 </h2>
 
 
-
-<select id="bracket">
+<select id="arenaType">
 
 <option value="1">
 2v2 Arena
 </option>
 
-
-<option value="1.2">
+<option value="1.25">
 3v3 Arena
 </option>
 
@@ -604,7 +833,7 @@ Current Rating
 
 <input 
 type="range"
-id="current"
+id="arenaCurrent"
 min="0"
 max="2400"
 step="100"
@@ -612,27 +841,26 @@ value="0">
 
 
 
-<div class="value">
+<p>
 
 Current:
-<span id="currentValue">
+<b id="arenaCurrentText">
 0
-</span>
+</b>
 
-</div>
-
+</p>
 
 
 
 
 <h2>
-Desired Rating
+Target Rating
 </h2>
 
 
-<input 
+<input
 type="range"
-id="desired"
+id="arenaTarget"
 min="1400"
 max="3000"
 step="100"
@@ -640,15 +868,14 @@ value="1800">
 
 
 
-<div class="value">
+<p>
 
 Target:
-<span id="desiredValue">
+<b id="arenaTargetText">
 1800
-</span>
+</b>
 
-</div>
-
+</p>
 
 
 
@@ -659,8 +886,7 @@ Mode
 </h2>
 
 
-
-<select id="mode">
+<select id="arenaMode">
 
 
 <option value="1">
@@ -668,7 +894,7 @@ Self Play
 </option>
 
 
-<option value="1.3">
+<option value="1.35">
 Piloted
 </option>
 
@@ -679,26 +905,20 @@ Piloted
 
 
 
-<h2>
-Your Price
-</h2>
+<div class="price">
 
-
-<div class="price-box">
-
-$<span id="price">
-45
+$<span id="arenaPrice">
+145
 </span>
 
 </div>
 
 
 
-
-<a class="discord-btn"
+<a class="small-btn"
 href="https://discord.gg/S7vr7fjF8">
 
-ORDER NOW
+ORDER ARENA
 
 </a>
 
@@ -712,359 +932,12 @@ ORDER NOW
 
 
 
-<style>
 
 
-.calculator{
+<section class="container" id="blitz">
 
-max-width:600px;
 
-margin:auto;
-
-text-align:center;
-
-}
-
-
-
-select{
-
-width:100%;
-
-padding:15px;
-
-margin:15px 0 25px;
-
-border-radius:10px;
-
-background:#111;
-
-color:white;
-
-border:1px solid #555;
-
-font-size:16px;
-
-}
-
-
-
-input[type="range"]{
-
-width:100%;
-
-margin:15px 0;
-
-}
-
-
-
-.value{
-
-font-size:18px;
-
-color:#ccc;
-
-margin-bottom:25px;
-
-}
-
-
-
-.price-box{
-
-font-size:45px;
-
-font-weight:900;
-
-color:#00ff88;
-
-margin:25px;
-
-}
-
-
-</style>
-<script>
-
-
-const current = document.getElementById("current");
-
-const desired = document.getElementById("desired");
-
-const currentValue = document.getElementById("currentValue");
-
-const desiredValue = document.getElementById("desiredValue");
-
-const price = document.getElementById("price");
-
-const bracket = document.getElementById("bracket");
-
-const mode = document.getElementById("mode");
-
-
-
-
-
-function calculatePrice(){
-
-
-let currentRating = Number(current.value);
-
-let targetRating = Number(desired.value);
-
-
-
-let difference = targetRating - currentRating;
-
-
-
-if(difference < 0){
-
-difference = 0;
-
-}
-
-
-
-let basePrice = difference / 25;
-
-
-
-let finalPrice = basePrice + 15;
-
-
-
-finalPrice = finalPrice * Number(bracket.value);
-
-
-finalPrice = finalPrice * Number(mode.value);
-
-
-
-price.innerText = Math.round(finalPrice);
-
-
-
-currentValue.innerText = currentRating;
-
-
-desiredValue.innerText = targetRating;
-
-
-
-}
-
-
-
-
-
-current.addEventListener(
-"input",
-calculatePrice
-);
-
-
-desired.addEventListener(
-"input",
-calculatePrice
-);
-
-
-bracket.addEventListener(
-"change",
-calculatePrice
-);
-
-
-mode.addEventListener(
-"change",
-calculatePrice
-);
-
-
-
-calculatePrice();
-
-
-
-</script>
-<div class="container">
-
-
-<div class="section-title">
-📦 ORDER SUMMARY
-</div>
-
-
-
-<div class="card calculator">
-
-
-<h2>
-Your Boost
-</h2>
-
-
-
-<p id="summary">
-
-Arena 2v2
-
-</p>
-
-
-<br>
-
-
-<p>
-
-Current Rating:
-<b id="summaryCurrent">
-0
-</b>
-
-</p>
-
-
-<p>
-
-Target Rating:
-<b id="summaryTarget">
-1800
-</b>
-
-</p>
-
-
-<p>
-
-Mode:
-<b id="summaryMode">
-Self Play
-</b>
-
-</p>
-
-
-
-<hr style="margin:25px 0;border-color:#333;">
-
-
-
-<h2>
-
-Total:
-
-</h2>
-
-
-<div class="price-box">
-
-$<span id="summaryPrice">
-45
-</span>
-
-</div>
-
-
-
-
-<a class="discord-btn"
-href="https://discord.gg/S7vr7fjF8">
-
-CONFIRM ORDER
-
-</a>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-<script>
-
-
-function updateSummary(){
-
-
-document.getElementById("summaryCurrent").innerText =
-current.value;
-
-
-document.getElementById("summaryTarget").innerText =
-desired.value;
-
-
-
-let modeText =
-mode.options[mode.selectedIndex].text;
-
-
-document.getElementById("summaryMode").innerText =
-modeText;
-
-
-
-let bracketText =
-bracket.options[bracket.selectedIndex].text;
-
-
-document.getElementById("summary").innerText =
-bracketText;
-
-
-
-document.getElementById("summaryPrice").innerText =
-price.innerText;
-
-
-
-}
-
-
-
-
-current.addEventListener(
-"input",
-updateSummary
-);
-
-
-desired.addEventListener(
-"input",
-updateSummary
-);
-
-
-mode.addEventListener(
-"change",
-updateSummary
-);
-
-
-bracket.addEventListener(
-"change",
-updateSummary
-);
-
-
-
-updateSummary();
-
-
-</script>
-<section class="container">
-
-
-<div class="section-title">
+<div class="title">
 
 ⚡ BLITZ BOOST CALCULATOR
 
@@ -1072,57 +945,37 @@ updateSummary();
 
 
 
-
-<div class="card calculator">
+<div class="service-card calculator">
 
 
 <h2>
 
-Choose Wins
+Current Rating
 
 </h2>
 
 
 
-<select id="blitzWins">
+<input
+type="range"
+id="blitzCurrent"
+min="0"
+max="2400"
+step="100"
+value="0">
 
 
-<option value="15">
 
-5 Wins
+<p>
 
-</option>
+Current:
 
+<b id="blitzCurrentText">
+0
+</b>
 
-<option value="30">
+</p>
 
-10 Wins
-
-</option>
-
-
-<option value="45">
-
-15 Wins
-
-</option>
-
-
-<option value="70">
-
-20 Wins
-
-</option>
-
-
-<option value="100">
-
-30 Wins
-
-</option>
-
-
-</select>
 
 
 
@@ -1130,19 +983,40 @@ Choose Wins
 
 <h2>
 
-Estimated Price
+Target Rating
 
 </h2>
 
 
 
+<input
+type="range"
+id="blitzTarget"
+min="1400"
+max="3000"
+step="100"
+value="1800">
 
-<div class="price-box">
+
+
+<p>
+
+Target:
+
+<b id="blitzTargetText">
+1800
+</b>
+
+</p>
+
+
+
+
+
+<div class="price">
 
 $<span id="blitzPrice">
-
-15
-
+100
 </span>
 
 </div>
@@ -1150,9 +1024,7 @@ $<span id="blitzPrice">
 
 
 
-
-<a class="discord-btn"
-
+<a class="small-btn"
 href="https://discord.gg/S7vr7fjF8">
 
 ORDER BLITZ
@@ -1171,21 +1043,62 @@ ORDER BLITZ
 
 
 
+
 <script>
 
 
-const blitzWins = document.getElementById("blitzWins");
-
-const blitzPrice = document.getElementById("blitzPrice");
+function arenaCalculate(){
 
 
+let current =
+Number(document.getElementById("arenaCurrent").value);
 
 
-function calculateBlitz(){
+let target =
+Number(document.getElementById("arenaTarget").value);
 
 
-blitzPrice.innerText =
-blitzWins.value;
+
+let type =
+Number(document.getElementById("arenaType").value);
+
+
+
+let mode =
+Number(document.getElementById("arenaMode").value);
+
+
+
+let price =
+((target-current)/12)+40;
+
+
+
+if(price<40){
+
+price=40;
+
+}
+
+
+
+price =
+price * type * mode;
+
+
+
+document.getElementById("arenaPrice").innerText =
+Math.round(price);
+
+
+
+document.getElementById("arenaCurrentText").innerText =
+current;
+
+
+document.getElementById("arenaTargetText").innerText =
+target;
+
 
 
 }
@@ -1193,30 +1106,103 @@ blitzWins.value;
 
 
 
-blitzWins.addEventListener(
-"change",
-calculateBlitz
+
+document.querySelectorAll("#arena input, #arena select")
+.forEach(x=>{
+
+x.addEventListener(
+"input",
+arenaCalculate
 );
 
 
+x.addEventListener(
+"change",
+arenaCalculate
+);
 
-calculateBlitz();
 
+});
+
+
+
+arenaCalculate();
+
+
+
+
+
+function blitzCalculate(){
+
+
+let current =
+Number(document.getElementById("blitzCurrent").value);
+
+
+let target =
+Number(document.getElementById("blitzTarget").value);
+
+
+
+let price =
+((target-current)/14)+35;
+
+
+
+if(price<35){
+
+price=35;
+
+}
+
+
+
+document.getElementById("blitzPrice").innerText =
+Math.round(price);
+
+
+
+document.getElementById("blitzCurrentText").innerText =
+current;
+
+
+document.getElementById("blitzTargetText").innerText =
+target;
+
+
+}
+
+
+
+
+document.querySelectorAll("#blitz input")
+.forEach(x=>{
+
+x.addEventListener(
+"input",
+blitzCalculate
+);
+
+
+});
+
+
+
+blitzCalculate();
 
 
 </script>
-<section class="container">
+<section class="container" id="rbg">
 
 
-<div class="section-title">
-
+<div class="title">
 🛡️ RBG BOOST CALCULATOR
-
 </div>
 
 
 
-<div class="card calculator">
+
+<div class="service-card calculator">
 
 
 <h2>
@@ -1234,12 +1220,13 @@ value="0">
 
 
 
-<p class="value">
+<p>
 
 Current:
-<span id="rbgCurrentValue">
+
+<b id="rbgCurrentText">
 0
-</span>
+</b>
 
 </p>
 
@@ -1262,30 +1249,23 @@ value="1800">
 
 
 
-<p class="value">
+<p>
 
 Target:
-<span id="rbgTargetValue">
+
+<b id="rbgTargetText">
 1800
-</span>
+</b>
 
 </p>
 
 
 
 
-
-<h2>
-
-Price
-
-</h2>
-
-
-<div class="price-box">
+<div class="price">
 
 $<span id="rbgPrice">
-50
+120
 </span>
 
 </div>
@@ -1293,8 +1273,7 @@ $<span id="rbgPrice">
 
 
 
-<a class="discord-btn"
-
+<a class="small-btn"
 href="https://discord.gg/S7vr7fjF8">
 
 ORDER RBG
@@ -1313,52 +1292,44 @@ ORDER RBG
 
 
 
-<section class="container">
+<section class="container" id="gladiator">
 
 
-<div class="section-title">
-
+<div class="title">
 👑 GLADIATOR PUSH
-
 </div>
 
 
 
-<div class="card calculator">
+<div class="service-card">
+
+
+<h2>
+Choose Goal
+</h2>
 
 
 
-<p>
-
-Professional Gladiator push with experienced PvP players.
-
-</p>
-
-
-
-<br>
-
-
-<select id="glad">
-
-
-<option value="100">
-
-1800 → 2100
-
-</option>
+<select id="gladiatorSelect">
 
 
 <option value="200">
 
-2100 → 2400
+2100 Rating
 
 </option>
 
 
 <option value="350">
 
-2400+
+2400 Rating
+
+</option>
+
+
+<option value="600">
+
+Gladiator
 
 </option>
 
@@ -1367,19 +1338,17 @@ Professional Gladiator push with experienced PvP players.
 
 
 
+<div class="price">
 
-<div class="price-box">
-
-$<span id="gladPrice">
-100
+$<span id="gladiatorPrice">
+200
 </span>
 
 </div>
 
 
 
-<a class="discord-btn"
-
+<a class="small-btn"
 href="https://discord.gg/S7vr7fjF8">
 
 ORDER GLADIATOR
@@ -1397,66 +1366,248 @@ ORDER GLADIATOR
 
 
 
+
+<section class="container">
+
+
+<div class="title">
+
+💎 CRYPTO PAYMENTS
+
+</div>
+
+
+
+<div class="cards">
+
+
+<div class="service-card">
+
+<h2>
+₿ Bitcoin
+</h2>
+
+<p>
+Secure crypto payments.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<h2>
+💵 USDT
+</h2>
+
+<p>
+Fast stablecoin payments.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<h2>
+Ł Litecoin
+</h2>
+
+<p>
+Low fees and fast transfers.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="container">
+
+
+<div class="title">
+
+⭐ WHY SONY BOOST
+
+</div>
+
+
+
+<div class="cards">
+
+
+<div class="service-card">
+
+<h2>
+⚔️ Pro Players
+</h2>
+
+<p>
+Experienced PvP players.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<h2>
+⚡ Fast Service
+</h2>
+
+<p>
+Quick communication and delivery.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<h2>
+🛡 Safe Boost
+</h2>
+
+<p>
+Professional and reliable service.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="container">
+
+
+<div class="title">
+
+💬 REVIEWS
+
+</div>
+
+
+
+<div class="cards">
+
+
+<div class="service-card">
+
+<h2>
+⭐⭐⭐⭐⭐
+</h2>
+
+<p>
+Amazing service. Fast rating push!
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<h2>
+⭐⭐⭐⭐⭐
+</h2>
+
+<p>
+Great players and communication.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<h2>
+⭐⭐⭐⭐⭐
+</h2>
+
+<p>
+Reached my goal quickly.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
 <script>
 
 
-const rbgCurrent =
-document.getElementById("rbgCurrent");
 
-
-const rbgTarget =
-document.getElementById("rbgTarget");
-
-
-const rbgCurrentValue =
-document.getElementById("rbgCurrentValue");
-
-
-const rbgTargetValue =
-document.getElementById("rbgTargetValue");
-
-
-const rbgPrice =
-document.getElementById("rbgPrice");
-
-
-
-
-function calculateRBG(){
+function rbgCalculate(){
 
 
 let current =
-Number(rbgCurrent.value);
+Number(document.getElementById("rbgCurrent").value);
 
 
 let target =
-Number(rbgTarget.value);
+Number(document.getElementById("rbgTarget").value);
 
 
 
 let price =
-((target-current)/20)+20;
+((target-current)/10)+50;
 
 
 
-if(price<20){
+if(price<50){
 
-price=20;
+price=50;
 
 }
 
 
 
-rbgPrice.innerText =
+document.getElementById("rbgPrice").innerText =
 Math.round(price);
 
 
 
-rbgCurrentValue.innerText =
+document.getElementById("rbgCurrentText").innerText =
 current;
 
 
-rbgTargetValue.innerText =
+document.getElementById("rbgTargetText").innerText =
 target;
 
 
@@ -1465,111 +1616,91 @@ target;
 
 
 
-rbgCurrent.addEventListener(
+document.querySelectorAll("#rbg input")
+.forEach(x=>{
+
+x.addEventListener(
 "input",
-calculateRBG
+rbgCalculate
 );
 
-
-
-rbgTarget.addEventListener(
-"input",
-calculateRBG
-);
+});
 
 
 
-calculateRBG();
+rbgCalculate();
 
 
 
 
 
-
-const glad =
-document.getElementById("glad");
-
-
-const gladPrice =
-document.getElementById("gladPrice");
+document.getElementById("gladiatorSelect")
+.addEventListener("change",function(){
 
 
+document.getElementById("gladiatorPrice")
+.innerText=this.value;
 
-glad.addEventListener(
-"change",
-()=>{
 
-gladPrice.innerText =
-glad.value;
-
-}
-
-);
+});
 
 
 
 </script>
-<section class="container">
+<section class="hero" id="contact">
 
 
-<div class="section-title">
+<div class="hero-text">
 
-💎 CRYPTO PAYMENTS
+
+<div class="logo">
+
+SONY
+
+<span>
+BOOST
+</span>
 
 </div>
 
 
 
+<h1>
 
-<div class="cards">
+Ready to reach your rating?
+
+</h1>
 
 
-
-<div class="card">
-
-<h2>
-₿ Bitcoin
-</h2>
 
 <p>
-Fast and secure cryptocurrency payments.
+
+Join SONY BOOST and play with experienced World of Warcraft players.
+
 </p>
+
+
+
+
+<a class="btn"
+
+href="https://discord.gg/S7vr7fjF8">
+
+START ORDER
+
+</a>
+
+
 
 </div>
 
 
 
 
-<div class="card">
 
-<h2>
-💵 USDT
-</h2>
+<div class="sonic-box">
 
-<p>
-USDT payments supported.
-TRC20 / ERC20 options.
-</p>
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h2>
-Ł Litecoin
-</h2>
-
-<p>
-Low fees and fast transactions.
-</p>
-
-</div>
-
-
+🦔⚔️
 
 </div>
 
@@ -1583,151 +1714,11 @@ Low fees and fast transactions.
 
 
 
+
 <section class="container">
 
 
-<div class="section-title">
-
-⭐ WHY SONY BOOST?
-
-</div>
-
-
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-<h2>
-⚔️ Experienced Players
-</h2>
-
-<p>
-Skilled PvP players helping you reach your goals.
-</p>
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h2>
-⚡ Fast Delivery
-</h2>
-
-<p>
-Quick communication and efficient boosting.
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-<h2>
-🛡️ Safe Service
-</h2>
-
-<p>
-Professional approach and customer support.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="container" id="reviews">
-
-
-<div class="section-title">
-
-💬 CUSTOMER REVIEWS
-
-</div>
-
-
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-<h2>
-⭐⭐⭐⭐⭐
-</h2>
-
-<p>
-"Fast boost and great communication!"
-</p>
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h2>
-⭐⭐⭐⭐⭐
-</h2>
-
-<p>
-"Reached my rating goal easily."
-</p>
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h2>
-⭐⭐⭐⭐⭐
-</h2>
-
-<p>
-"Professional players and smooth service."
-</p>
-
-</div>
-
-
-
-</div>
-
-
-
-</section>
-<section class="container">
-
-
-<div class="section-title">
+<div class="title">
 
 ❓ FAQ
 
@@ -1739,15 +1730,16 @@ Professional approach and customer support.
 <div class="cards">
 
 
-
-<div class="card">
+<div class="service-card">
 
 <h2>
 How to order?
 </h2>
 
 <p>
-Choose your boost, check the price and contact us through Discord.
+
+Choose your boost and contact us through Discord.
+
 </p>
 
 </div>
@@ -1756,14 +1748,16 @@ Choose your boost, check the price and contact us through Discord.
 
 
 
-<div class="card">
+<div class="service-card">
 
 <h2>
-How long does boost take?
+How fast is delivery?
 </h2>
 
 <p>
-Delivery time depends on rating and selected service.
+
+Depends on rating and selected service.
+
 </p>
 
 </div>
@@ -1773,14 +1767,16 @@ Delivery time depends on rating and selected service.
 
 
 
-<div class="card">
+<div class="service-card">
 
 <h2>
 Can I play with booster?
 </h2>
 
 <p>
-Yes. Play With Pro and Coaching options are available.
+
+Yes. Play With Pro and Coaching options available.
+
 </p>
 
 </div>
@@ -1789,15 +1785,16 @@ Yes. Play With Pro and Coaching options are available.
 
 
 
-
-<div class="card">
+<div class="service-card">
 
 <h2>
-What payments do you accept?
+Payment methods?
 </h2>
 
 <p>
-Crypto payments and other available methods.
+
+Crypto payments supported.
+
 </p>
 
 </div>
@@ -1809,43 +1806,6 @@ Crypto payments and other available methods.
 
 </section>
 
-
-
-
-
-
-
-<section class="hero">
-
-
-<h1>
-
-🔥 READY TO BOOST?
-
-</h1>
-
-
-
-<p>
-
-Join SONY BOOST today and reach your goals.
-
-</p>
-
-
-
-
-<a class="discord-btn"
-
-href="https://discord.gg/S7vr7fjF8">
-
-START ORDER
-
-</a>
-
-
-
-</section>
 
 
 
@@ -1857,156 +1817,40 @@ START ORDER
 
 text-align:center;
 
-padding:40px;
+padding:50px 20px;
 
-color:#777;
+color:#888;
 
 ">
 
 
+<h2 style="color:#ffd369;">
+
 ⚔️ SONY BOOST
 
-
-<br><br>
-
-
-Premium World of Warcraft Boosting Service
+</h2>
 
 
-<br><br>
+<p>
 
+Premium World of Warcraft Boosting
+
+</p>
+
+
+<br>
+
+
+<p>
 
 © 2026 SONY BOOST
+
+</p>
 
 
 
 </footer>
-<style>
 
-
-/* FINAL EFFECTS */
-
-
-.card b{
-
-color:#00ff88;
-
-font-size:18px;
-
-}
-
-
-
-.discord-btn{
-
-box-shadow:
-
-0 0 15px rgba(88,101,242,0.5);
-
-}
-
-
-
-.logo{
-
-animation:
-
-glow 3s infinite alternate;
-
-}
-
-
-
-@keyframes glow{
-
-
-from{
-
-text-shadow:
-
-0 0 10px #ffd369,
-0 0 20px #ff8c00;
-
-}
-
-
-to{
-
-text-shadow:
-
-0 0 25px #ffd369,
-0 0 60px #ff8c00;
-
-}
-
-
-}
-
-
-
-
-/* MOBILE */
-
-
-@media(max-width:700px){
-
-
-nav{
-
-padding:20px;
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-
-
-nav a{
-
-margin:0 10px;
-
-}
-
-
-
-.logo{
-
-font-size:45px;
-
-}
-
-
-
-.logo span{
-
-font-size:25px;
-
-}
-
-
-
-.hero h1{
-
-font-size:24px;
-
-}
-
-
-
-.section-title{
-
-font-size:26px;
-
-}
-
-
-}
-
-
-
-</style>
 
 
 
