@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SONY BOOST | Premium WoW PvP</title>
+<title>SONY BOOST | WoW Retail PvP</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
@@ -29,21 +29,21 @@ color:white;
 background:
 
 radial-gradient(
-circle at 15% 20%,
+circle at 20% 20%,
 rgba(0,140,255,.25),
 transparent 35%
 ),
 
 radial-gradient(
-circle at 85% 30%,
-rgba(255,180,50,.15),
+circle at 80% 40%,
+rgba(255,190,60,.18),
 transparent 35%
 ),
 
 linear-gradient(
 135deg,
-#05060c,
-#0c1124,
+#03050b,
+#10162d,
 #020308
 );
 
@@ -56,8 +56,7 @@ overflow-x:hidden;
 
 
 
-/* energy effect */
-
+/* magical background */
 
 body:before{
 
@@ -65,25 +64,25 @@ content:"";
 
 position:fixed;
 
-width:600px;
+width:700px;
 
-height:600px;
+height:700px;
 
-top:-200px;
+left:-250px;
 
-left:-200px;
+top:-250px;
 
 
 background:
 
 radial-gradient(
 circle,
-rgba(0,150,255,.35),
+rgba(0,160,255,.35),
 transparent 70%
 );
 
 
-filter:blur(100px);
+filter:blur(120px);
 
 
 animation:move 12s infinite alternate;
@@ -96,7 +95,6 @@ z-index:-1;
 
 
 @keyframes move{
-
 
 from{
 
@@ -111,23 +109,17 @@ transform:translate(500px,300px);
 
 }
 
-
 }
 
 
 
 
 
-/* HEADER */
-
-
 header{
-
 
 max-width:1400px;
 
 margin:auto;
-
 
 padding:30px 50px;
 
@@ -138,7 +130,6 @@ justify-content:space-between;
 
 align-items:center;
 
-
 }
 
 
@@ -146,12 +137,17 @@ align-items:center;
 .brand{
 
 
-font-size:26px;
+font-size:28px;
 
 font-weight:900;
 
+
 color:#ffd369;
 
+
+text-shadow:
+
+0 0 25px rgba(255,200,70,.5);
 
 }
 
@@ -160,17 +156,15 @@ color:#ffd369;
 .discord{
 
 
-color:#00aaff;
+color:#5865F2;
 
-font-weight:700;
-
+font-weight:800;
 
 }
 
 
 
 nav a{
-
 
 color:white;
 
@@ -180,26 +174,10 @@ margin-left:30px;
 
 opacity:.8;
 
-
 }
 
 
 
-nav a:hover{
-
-opacity:1;
-
-color:#ffd369;
-
-}
-
-
-
-
-
-
-
-/* HERO */
 
 
 .hero{
@@ -215,9 +193,9 @@ padding:100px 50px;
 
 display:flex;
 
-justify-content:space-between;
-
 align-items:center;
+
+justify-content:space-between;
 
 
 }
@@ -228,15 +206,14 @@ align-items:center;
 .logo{
 
 
-font-size:90px;
+font-size:100px;
 
 font-weight:900;
 
-
-line-height:.9;
-
-
 letter-spacing:5px;
+
+
+line-height:.85;
 
 
 color:#ffd369;
@@ -244,11 +221,10 @@ color:#ffd369;
 
 text-shadow:
 
-0 0 30px rgba(255,200,70,.6);
+0 0 35px rgba(255,200,70,.7);
 
 
 }
-
 
 
 
@@ -257,18 +233,15 @@ text-shadow:
 
 display:block;
 
-
-font-size:65px;
+font-size:70px;
 
 
 color:white;
 
-
-letter-spacing:20px;
+letter-spacing:22px;
 
 
 }
-
 
 
 
@@ -276,13 +249,13 @@ letter-spacing:20px;
 .hero h1{
 
 
-margin-top:35px;
+margin-top:40px;
 
-
-font-size:40px;
+font-size:42px;
 
 
 }
+
 
 
 
@@ -292,16 +265,16 @@ font-size:40px;
 margin-top:20px;
 
 
-max-width:600px;
+max-width:650px;
 
 
-font-size:18px;
+font-size:19px;
 
 
 line-height:1.7;
 
 
-color:#b5bac8;
+color:#b6bbca;
 
 
 }
@@ -309,7 +282,7 @@ color:#b5bac8;
 
 
 
-.main-button{
+.button{
 
 
 display:inline-block;
@@ -318,11 +291,13 @@ display:inline-block;
 margin-top:40px;
 
 
-padding:17px 45px;
+padding:18px 50px;
+
+
+border-radius:15px;
 
 
 background:
-
 
 linear-gradient(
 90deg,
@@ -331,14 +306,10 @@ linear-gradient(
 );
 
 
-
-border-radius:15px;
+color:white;
 
 
 text-decoration:none;
-
-
-color:white;
 
 
 font-weight:900;
@@ -346,21 +317,7 @@ font-weight:900;
 
 box-shadow:
 
-0 0 35px rgba(0,140,255,.5);
-
-
-transition:.3s;
-
-
-}
-
-
-
-
-.main-button:hover{
-
-
-transform:translateY(-5px);
+0 0 40px rgba(0,140,255,.5);
 
 
 }
@@ -370,12 +327,14 @@ transform:translateY(-5px);
 
 
 
-.hero-icon{
+/* Sonic style hero */
+
+.hero-character{
 
 
-width:400px;
+width:430px;
 
-height:400px;
+height:430px;
 
 
 border-radius:50%;
@@ -384,33 +343,31 @@ border-radius:50%;
 display:flex;
 
 
+align-items:center;
+
 justify-content:center;
 
 
-align-items:center;
-
-
-font-size:130px;
-
+font-size:150px;
 
 
 background:
 
 radial-gradient(
 circle,
-rgba(0,150,255,.35),
+rgba(0,170,255,.35),
 transparent 65%
 );
 
 
+border:
 
-border:1px solid #008cff;
+1px solid #008cff;
 
 
 box-shadow:
 
-0 0 80px rgba(0,150,255,.4);
-
+0 0 100px rgba(0,150,255,.45);
 
 
 animation:
@@ -419,7 +376,6 @@ float 4s infinite alternate;
 
 
 }
-
 
 
 
@@ -457,14 +413,13 @@ flex-direction:column;
 
 text-align:center;
 
-
 }
 
 
 
 .logo{
 
-font-size:55px;
+font-size:60px;
 
 }
 
@@ -476,7 +431,8 @@ font-size:40px;
 }
 
 
-.hero-icon{
+
+.hero-character{
 
 margin-top:50px;
 
@@ -484,25 +440,10 @@ width:300px;
 
 height:300px;
 
-
-}
-
-
-
-header{
-
-flex-direction:column;
-
-gap:20px;
-
-
 }
 
 
 }
-
-
-
 
 </style>
 
@@ -535,24 +476,15 @@ Discord: sonyxzc
 
 <nav>
 
-
-<a href="#">
-Home
-</a>
-
-
 <a href="#">
 Services
 </a>
-
 
 <a href="#">
 Contact
 </a>
 
-
 </nav>
-
 
 
 </header>
@@ -562,14 +494,10 @@ Contact
 
 
 
-
-
 <section class="hero">
 
 
-
 <div>
-
 
 
 <div class="logo">
@@ -580,30 +508,30 @@ SONY
 BOOST
 </span>
 
-
 </div>
+
 
 
 
 <h1>
 
-Premium World of Warcraft PvP Boosting
+World of Warcraft Retail PvP
 
 </h1>
 
 
 
-
 <p>
 
-Arena, Blitz, RBG, Gladiator and Coaching.
-Configure your boost and reach your rating goals.
+Premium Arena, Blitz and RBG boosting service.
+Reach your rating goals with experienced players.
 
 </p>
 
 
 
-<a class="main-button" href="#">
+
+<a class="button" href="#">
 
 CONFIGURE BOOST
 
@@ -618,19 +546,15 @@ CONFIGURE BOOST
 
 
 
+<div class="hero-character">
 
-<div class="hero-icon">
-
-⚔️
+🦔⚡
 
 </div>
 
 
 
-
-
 </section>
-
 
 
 
@@ -641,23 +565,25 @@ CONFIGURE BOOST
 <section class="services">
 
 
-<h2 class="title">
+<h2 class="section-title">
 
-⚔️ OUR SERVICES
+⚔️ BOOST SERVICES
 
 </h2>
 
 
 
-<div class="service-grid">
+<div class="cards">
+
+
 
 
 
 <div class="service-card"
-onclick="openConfigurator('Arena Boost')">
+onclick="openOrder('Arena Boost')">
 
 
-<div class="service-icon">
+<div class="icon">
 ⚔️
 </div>
 
@@ -685,11 +611,12 @@ CONFIGURE
 
 
 
+
 <div class="service-card"
-onclick="openConfigurator('Blitz Boost')">
+onclick="openOrder('Blitz Boost')">
 
 
-<div class="service-icon">
+<div class="icon">
 ⚡
 </div>
 
@@ -700,7 +627,7 @@ Blitz Boost
 
 
 <p>
-Rated Blitz Progression
+Rated Blitz Rating
 </p>
 
 
@@ -718,10 +645,10 @@ CONFIGURE
 
 
 <div class="service-card"
-onclick="openConfigurator('RBG Boost')">
+onclick="openOrder('RBG Boost')">
 
 
-<div class="service-icon">
+<div class="icon">
 🛡️
 </div>
 
@@ -732,7 +659,7 @@ RBG Boost
 
 
 <p>
-Team Rating Push
+Team PvP Progress
 </p>
 
 
@@ -750,10 +677,10 @@ CONFIGURE
 
 
 <div class="service-card"
-onclick="openConfigurator('Gladiator Push')">
+onclick="openOrder('Gladiator Push')">
 
 
-<div class="service-icon">
+<div class="icon">
 👑
 </div>
 
@@ -764,7 +691,7 @@ Gladiator Push
 
 
 <p>
-Elite PvP Achievement
+Elite Rating Goal
 </p>
 
 
@@ -782,10 +709,10 @@ CONFIGURE
 
 
 <div class="service-card"
-onclick="openConfigurator('Coaching')">
+onclick="openOrder('Coaching')">
 
 
-<div class="service-icon">
+<div class="icon">
 🎓
 </div>
 
@@ -796,7 +723,7 @@ Coaching
 
 
 <p>
-Improve your gameplay
+Improve Your Gameplay
 </p>
 
 
@@ -813,12 +740,11 @@ CONFIGURE
 
 
 
-
 <div class="service-card"
-onclick="openConfigurator('Gear Boost')">
+onclick="openOrder('Gear Boost')">
 
 
-<div class="service-icon">
+<div class="icon">
 ⚙️
 </div>
 
@@ -829,7 +755,7 @@ Gear Boost
 
 
 <p>
-Honor & Conquest Gear
+Fast PvP Gear
 </p>
 
 
@@ -853,6 +779,7 @@ CONFIGURE
 
 
 
+
 <style>
 
 
@@ -861,9 +788,7 @@ CONFIGURE
 
 max-width:1400px;
 
-
 margin:auto;
-
 
 padding:90px 50px;
 
@@ -873,13 +798,13 @@ padding:90px 50px;
 
 
 
-.title{
+.section-title{
 
 
 text-align:center;
 
 
-font-size:42px;
+font-size:45px;
 
 
 font-weight:900;
@@ -888,7 +813,7 @@ font-weight:900;
 color:#ffd369;
 
 
-margin-bottom:55px;
+margin-bottom:60px;
 
 
 text-shadow:
@@ -901,7 +826,8 @@ text-shadow:
 
 
 
-.service-grid{
+
+.cards{
 
 
 display:grid;
@@ -912,7 +838,7 @@ grid-template-columns:
 repeat(auto-fit,minmax(280px,1fr));
 
 
-gap:30px;
+gap:35px;
 
 
 }
@@ -924,19 +850,27 @@ gap:30px;
 .service-card{
 
 
-background:
+position:relative;
 
+
+padding:40px;
+
+
+background:
 
 linear-gradient(
 
 145deg,
 
-rgba(25,30,55,.95),
+rgba(22,28,55,.95),
 
-rgba(5,6,15,.95)
+rgba(4,6,14,.98)
 
 );
 
+
+
+border-radius:25px;
 
 
 border:
@@ -944,16 +878,14 @@ border:
 1px solid rgba(255,211,105,.35);
 
 
-border-radius:25px;
-
-
-padding:35px;
-
 
 text-align:center;
 
 
 cursor:pointer;
+
+
+overflow:hidden;
 
 
 transition:.35s;
@@ -963,18 +895,46 @@ transition:.35s;
 
 
 
-.service-card:hover{
+
+.service-card:before{
 
 
-transform:translateY(-12px);
+content:"";
 
 
-border-color:#00aaff;
+position:absolute;
 
 
-box-shadow:
+top:0;
 
-0 0 40px rgba(0,140,255,.35);
+
+left:-100%;
+
+
+height:3px;
+
+
+width:100%;
+
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+#00aaff,
+
+#ffd369,
+
+transparent
+
+);
+
+
+transition:.5s;
 
 
 }
@@ -982,10 +942,43 @@ box-shadow:
 
 
 
-.service-icon{
+
+.service-card:hover:before{
 
 
-font-size:65px;
+left:100%;
+
+
+}
+
+
+
+
+
+.service-card:hover{
+
+
+transform:translateY(-12px);
+
+
+border-color:#ffd369;
+
+
+box-shadow:
+
+0 0 50px rgba(0,140,255,.35);
+
+
+}
+
+
+
+
+
+.icon{
+
+
+font-size:70px;
 
 
 margin-bottom:20px;
@@ -996,16 +989,14 @@ margin-bottom:20px;
 
 
 
+
 .service-card h3{
 
 
-font-size:28px;
+font-size:30px;
 
 
 color:#ffd369;
-
-
-margin-bottom:15px;
 
 
 }
@@ -1020,7 +1011,7 @@ margin-bottom:15px;
 color:#b5bac8;
 
 
-margin-bottom:25px;
+margin:20px 0;
 
 
 }
@@ -1032,7 +1023,7 @@ margin-bottom:25px;
 .service-card button{
 
 
-padding:14px 35px;
+padding:15px 40px;
 
 
 border:0;
@@ -1053,6 +1044,7 @@ cursor:pointer;
 }
 
 
+
 </style>
 
 
@@ -1064,25 +1056,25 @@ cursor:pointer;
 <script>
 
 
-function openConfigurator(service){
+function openOrder(service){
 
 
-console.log("Selected:",service);
+console.log(service);
 
 
 }
 
 
 </script>
-<div class="config-modal" id="configModal">
+<div class="order-modal" id="orderModal">
 
 
-<div class="config-window">
+<div class="order-window">
 
 
 
-<button class="close"
-onclick="closeConfigurator()">
+<button class="close-btn"
+onclick="closeOrder()">
 
 ✕
 
@@ -1090,17 +1082,17 @@ onclick="closeConfigurator()">
 
 
 
-<h2 id="selectedService">
+
+<h2 id="orderTitle">
 
 Arena Boost
 
 </h2>
 
 
+<p class="subtitle">
 
-<p class="subtext">
-
-Configure your order
+World of Warcraft Retail PvP
 
 </p>
 
@@ -1108,22 +1100,24 @@ Configure your order
 
 
 
-<h3>Game Version</h3>
 
 
-<div class="options">
+<h3>Bracket</h3>
 
 
-<button onclick="setGame('Retail')">
+<div class="choices">
 
-Retail
+
+<button onclick="setBracket('2v2')">
+
+2v2
 
 </button>
 
 
-<button onclick="setGame('MoP Classic')">
+<button onclick="setBracket('3v3')">
 
-MoP Classic
+3v3
 
 </button>
 
@@ -1136,32 +1130,32 @@ MoP Classic
 
 
 
-<h3>Boost Type</h3>
+
+<h3>Boost Method</h3>
 
 
-<div class="options">
+<div class="choices">
 
 
-<button onclick="setMode(1)">
+<button onclick="setMethod(1)">
 
 🟢 Self Play
 
 </button>
 
 
-<button onclick="setMode(1.15)">
+<button onclick="setMethod(1.15)">
 
 🟣 Pilot
 
 </button>
 
 
-<button onclick="setMode(1.30)">
+<button onclick="setMethod(1.35)">
 
 🔵 Parsec
 
 </button>
-
 
 
 </div>
@@ -1172,28 +1166,24 @@ MoP Classic
 
 
 
-<h3>Rating Goal</h3>
-
+<h3>Current Rating</h3>
 
 
 <input 
 type="range"
-id="rating"
-min="1400"
-max="2400"
+id="currentRating"
+min="0"
+max="3000"
 step="100"
 value="1800">
 
 
 
-<div class="rating">
+<div class="rating-text">
 
-Target:
-
-<span id="ratingValue">
-
+Current:
+<span id="currentValue">
 1800
-
 </span>
 
 </div>
@@ -1204,7 +1194,36 @@ Target:
 
 
 
-<div class="price-box">
+
+<h3>Target Rating</h3>
+
+
+<input 
+type="range"
+id="targetRating"
+min="1400"
+max="3000"
+step="100"
+value="2400">
+
+
+
+<div class="rating-text">
+
+Target:
+<span id="targetValue">
+2400
+</span>
+
+</div>
+
+
+
+
+
+
+
+<div class="price">
 
 
 TOTAL
@@ -1212,9 +1231,9 @@ TOTAL
 
 <strong>
 
-$<span id="totalPrice">
+$<span id="priceValue">
 
-120
+600
 
 </span>
 
@@ -1228,9 +1247,7 @@ $<span id="totalPrice">
 
 
 
-<a class="discord-button"
-
-href="#">
+<a class="discord-order">
 
 💬 ORDER — Discord: sonyxzc
 
@@ -1253,7 +1270,7 @@ href="#">
 <style>
 
 
-.config-modal{
+.order-modal{
 
 
 display:none;
@@ -1283,16 +1300,16 @@ justify-content:center;
 
 
 
-.config-window{
+.order-window{
 
 
-width:550px;
+width:600px;
 
 
 max-width:90%;
 
 
-padding:35px;
+padding:40px;
 
 
 background:
@@ -1302,15 +1319,17 @@ linear-gradient(
 
 145deg,
 
-#171c38,
+#151a35,
 
-#05060d
+#04050b
 
 );
 
 
 
-border:2px solid #ffd369;
+border:
+
+2px solid #ffd369;
 
 
 border-radius:25px;
@@ -1318,7 +1337,7 @@ border-radius:25px;
 
 box-shadow:
 
-0 0 80px rgba(0,140,255,.5);
+0 0 100px rgba(0,140,255,.5);
 
 
 position:relative;
@@ -1330,7 +1349,7 @@ position:relative;
 
 
 
-.close{
+.close-btn{
 
 
 position:absolute;
@@ -1363,13 +1382,13 @@ cursor:pointer;
 
 
 
-.config-window h2{
+.order-window h2{
 
 
 text-align:center;
 
 
-font-size:35px;
+font-size:38px;
 
 
 color:#ffd369;
@@ -1380,8 +1399,7 @@ color:#ffd369;
 
 
 
-
-.subtext{
+.subtitle{
 
 
 text-align:center;
@@ -1396,19 +1414,7 @@ color:#aaa;
 
 
 
-.config-window h3{
-
-
-margin-top:25px;
-
-
-}
-
-
-
-
-
-.options{
+.choices{
 
 
 display:flex;
@@ -1424,17 +1430,16 @@ margin-top:15px;
 
 
 
-
-.options button{
+.choices button{
 
 
 flex:1;
 
 
-padding:14px;
+padding:15px;
 
 
-background:#090b15;
+background:#080b18;
 
 
 border:1px solid #008cff;
@@ -1455,25 +1460,13 @@ cursor:pointer;
 
 
 
-.options button:hover{
-
-
-border-color:#ffd369;
-
-
-}
-
-
-
-
-
 input{
 
 
 width:100%;
 
 
-margin-top:20px;
+margin-top:15px;
 
 
 }
@@ -1481,8 +1474,7 @@ margin-top:20px;
 
 
 
-
-.rating{
+.rating-text{
 
 
 margin-top:10px;
@@ -1495,13 +1487,13 @@ color:#aaa;
 
 
 
-.rating span{
+.rating-text span{
 
 
 color:#00aaff;
 
 
-font-weight:bold;
+font-weight:900;
 
 
 }
@@ -1509,14 +1501,13 @@ font-weight:bold;
 
 
 
-
-.price-box{
+.price{
 
 
 text-align:center;
 
 
-margin-top:30px;
+margin-top:35px;
 
 
 font-size:22px;
@@ -1526,14 +1517,13 @@ font-size:22px;
 
 
 
-
-.price-box strong{
+.price strong{
 
 
 display:block;
 
 
-font-size:55px;
+font-size:60px;
 
 
 color:#00ff88;
@@ -1544,7 +1534,8 @@ color:#00ff88;
 
 
 
-.discord-button{
+
+.discord-order{
 
 
 display:block;
@@ -1553,22 +1544,16 @@ display:block;
 margin-top:30px;
 
 
-text-align:center;
+background:#5865F2;
 
 
-padding:16px;
+padding:17px;
 
 
 border-radius:14px;
 
 
-background:#5865F2;
-
-
-color:white;
-
-
-text-decoration:none;
+text-align:center;
 
 
 font-weight:900;
@@ -1586,36 +1571,34 @@ font-weight:900;
 
 
 
-
 <script>
 
 
-let selectedMode = 1;
+let serviceSelected="Arena Boost";
 
-let selectedGame = "Retail";
+let bracket="2v2";
 
-let selectedBoostService = "";
-
-
+let method=1;
 
 
 
 
-function openConfigurator(service){
+
+function openOrder(service){
 
 
-selectedBoostService = service;
+serviceSelected=service;
 
 
-document.getElementById("selectedService")
-.innerText = service;
+document.getElementById("orderTitle")
+.innerText=service;
 
 
-document.getElementById("configModal")
+document.getElementById("orderModal")
 .style.display="flex";
 
 
-calculatePrice();
+calculate();
 
 
 }
@@ -1626,10 +1609,10 @@ calculatePrice();
 
 
 
-function closeConfigurator(){
+function closeOrder(){
 
 
-document.getElementById("configModal")
+document.getElementById("orderModal")
 .style.display="none";
 
 
@@ -1640,28 +1623,14 @@ document.getElementById("configModal")
 
 
 
-function setMode(value){
+
+function setBracket(value){
 
 
-selectedMode=value;
+bracket=value;
 
 
-calculatePrice();
-
-
-}
-
-
-
-
-
-function setGame(game){
-
-
-selectedGame=game;
-
-
-calculatePrice();
+calculate();
 
 
 }
@@ -1671,55 +1640,115 @@ calculatePrice();
 
 
 
-function calculatePrice(){
+
+function setMethod(value){
 
 
-let rating =
+method=value;
+
+
+calculate();
+
+
+}
+
+
+
+
+
+
+
+function calculate(){
+
+
+let current=
 
 Number(
-document.getElementById("rating").value
+document.getElementById("currentRating").value
 );
 
 
 
-let base=50;
+let target=
+
+Number(
+document.getElementById("targetRating").value
+);
 
 
 
-if(selectedBoostService=="Arena Boost")
-base=50;
+
+let diff=target-current;
 
 
-if(selectedBoostService=="Blitz Boost")
-base=40;
-
-
-if(selectedBoostService=="RBG Boost")
-base=80;
-
-
-if(selectedBoostService=="Gladiator Push")
-base=200;
+if(diff<0) diff=0;
 
 
 
-let price =
-
-base + ((rating-1400)/10);
+let price=0;
 
 
 
-price*=selectedMode;
 
 
 
-document.getElementById("totalPrice")
+if(serviceSelected=="Blitz Boost"){
+
+
+price=diff*1.7;
+
+
+}
+
+else{
+
+
+price=diff*1.5;
+
+
+
+if(bracket=="3v3"){
+
+
+price*=1.5;
+
+
+}
+
+
+}
+
+
+
+
+
+
+if(diff>=1200){
+
+
+price+=300;
+
+
+}
+
+
+
+price*=method;
+
+
+
+document.getElementById("priceValue")
 .innerText=Math.round(price);
 
 
 
-document.getElementById("ratingValue")
-.innerText=rating;
+document.getElementById("currentValue")
+.innerText=current;
+
+
+
+document.getElementById("targetValue")
+.innerText=target;
 
 
 }
@@ -1729,39 +1758,108 @@ document.getElementById("ratingValue")
 
 
 
-document.getElementById("rating")
-.addEventListener(
-"input",
-calculatePrice
-);
+document.getElementById("currentRating")
+.oninput=calculate;
+
+
+
+document.getElementById("targetRating")
+.oninput=calculate;
 
 
 
 </script>
-<section class="extras">
+<section class="premium">
 
 
-<h2 class="title">
+<h2 class="section-title">
 
-💎 PREMIUM FEATURES
+💎 PREMIUM BOOST EXPERIENCE
 
 </h2>
 
 
 
-<div class="extra-grid">
+<div class="premium-grid">
 
 
-
-<div class="extra-card">
+<div class="premium-card">
 
 <h3>
-⚔️ Arena Brackets
+🏆 High Rating
 </h3>
 
 <p>
-2v2 / 3v3 rating push with professional players.
+2400+ rating requires experienced PvP players.
 </p>
+
+</div>
+
+
+
+<div class="premium-card">
+
+<h3>
+⚡ Fast Delivery
+</h3>
+
+<p>
+Professional players and fast communication.
+</p>
+
+</div>
+
+
+
+<div class="premium-card">
+
+<h3>
+🛡 Safe Process
+</h3>
+
+<p>
+Transparent boosting with Discord support.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="prices">
+
+
+<h2 class="section-title">
+
+⚔️ HIGH RATING PRICES
+
+</h2>
+
+
+
+<div class="price-table">
+
+
+<div>
+
+<h3>
+Blitz 3000 Rating
+</h3>
+
+
+<strong>
+$1700
+</strong>
+
 
 </div>
 
@@ -1769,15 +1867,17 @@ calculatePrice
 
 
 
-<div class="extra-card">
+<div>
 
 <h3>
-🕹 Self Play
+Arena 2v2 3000
 </h3>
 
-<p>
-Play together with our boosters.
-</p>
+
+<strong>
+$1500
+</strong>
+
 
 </div>
 
@@ -1785,31 +1885,19 @@ Play together with our boosters.
 
 
 
-<div class="extra-card">
+
+
+<div>
 
 <h3>
-🔵 Parsec
+Arena 3v3 3000
 </h3>
 
-<p>
-Watch the process live with maximum control.
-</p>
 
-</div>
+<strong>
+$2500
+</strong>
 
-
-
-
-
-<div class="extra-card">
-
-<h3>
-🟣 Pilot
-</h3>
-
-<p>
-Fastest way to reach your rating goal.
-</p>
 
 </div>
 
@@ -1826,84 +1914,12 @@ Fastest way to reach your rating goal.
 
 
 
-
-<section class="extras">
-
-
-<h2 class="title">
-
-💰 PAYMENT METHODS
-
-</h2>
-
-
-
-<div class="extra-grid">
-
-
-
-<div class="extra-card">
-
-<h3>
-₿ Bitcoin
-</h3>
-
-<p>
-Secure cryptocurrency payment.
-</p>
-
-</div>
-
-
-
-
-<div class="extra-card">
-
-<h3>
-💵 USDT
-</h3>
-
-<p>
-Fast stablecoin payments.
-</p>
-
-</div>
-
-
-
-
-<div class="extra-card">
-
-<h3>
-Ł Litecoin
-</h3>
-
-<p>
-Low fee transfers.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="contact-box">
+<section class="payment">
 
 
 <h2>
 
-💬 NEED HELP?
+💰 CRYPTO PAYMENT
 
 </h2>
 
@@ -1911,13 +1927,305 @@ Low fee transfers.
 
 <p>
 
-Contact SONY BOOST directly:
+Pay securely with cryptocurrency
 
 </p>
 
 
 
-<div class="discord-name">
+<div class="coins">
+
+
+₿ Bitcoin
+
+&nbsp;&nbsp;
+
+₮ USDT
+
+&nbsp;&nbsp;
+
+Ł Litecoin
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<style>
+
+
+.premium,
+.prices{
+
+
+max-width:1400px;
+
+
+margin:auto;
+
+
+padding:80px 50px;
+
+
+}
+
+
+
+
+
+.premium-grid{
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(280px,1fr));
+
+
+gap:30px;
+
+
+}
+
+
+
+
+.premium-card{
+
+
+background:
+
+linear-gradient(
+
+145deg,
+
+#151a35,
+
+#05060d
+
+);
+
+
+padding:35px;
+
+
+border-radius:22px;
+
+
+border:1px solid rgba(255,211,105,.3);
+
+
+text-align:center;
+
+
+}
+
+
+
+.premium-card h3{
+
+
+color:#ffd369;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+
+.premium-card p{
+
+
+color:#aaa;
+
+
+}
+
+
+
+
+.price-table{
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(280px,1fr));
+
+
+gap:30px;
+
+
+}
+
+
+
+
+
+.price-table div{
+
+
+background:
+
+linear-gradient(
+
+145deg,
+
+#10162d,
+
+#05060d
+
+);
+
+
+padding:35px;
+
+
+border-radius:20px;
+
+
+border:1px solid #ffd369;
+
+
+text-align:center;
+
+
+}
+
+
+
+
+.price-table h3{
+
+
+color:white;
+
+
+}
+
+
+
+.price-table strong{
+
+
+display:block;
+
+
+font-size:45px;
+
+
+color:#00ff88;
+
+
+margin-top:20px;
+
+
+}
+
+
+
+
+
+.payment{
+
+
+margin:50px auto;
+
+
+max-width:800px;
+
+
+padding:50px;
+
+
+text-align:center;
+
+
+background:
+
+rgba(10,15,30,.9);
+
+
+border-radius:25px;
+
+
+border:1px solid #ffd369;
+
+
+}
+
+
+
+
+.payment h2{
+
+
+color:#ffd369;
+
+
+font-size:35px;
+
+
+}
+
+
+
+
+.coins{
+
+
+margin-top:25px;
+
+
+font-size:25px;
+
+
+font-weight:900;
+
+
+color:#00aaff;
+
+
+}
+
+
+</style>
+<section class="contact">
+
+
+<h2>
+
+💬 CONTACT SONY BOOST
+
+</h2>
+
+
+
+<p>
+
+Ready to start your PvP journey?
+
+</p>
+
+
+
+<div class="discord-big">
 
 sonyxzc
 
@@ -1941,267 +2249,12 @@ ADD DISCORD
 
 
 
-<style>
-
-
-.extras{
-
-
-max-width:1400px;
-
-
-margin:auto;
-
-
-padding:80px 50px;
-
-
-}
-
-
-
-
-
-.extra-grid{
-
-
-display:grid;
-
-
-grid-template-columns:
-
-repeat(auto-fit,minmax(280px,1fr));
-
-
-gap:30px;
-
-
-}
-
-
-
-
-.extra-card{
-
-
-background:
-
-
-linear-gradient(
-
-145deg,
-
-rgba(20,25,55,.95),
-
-rgba(5,6,15,.95)
-
-);
-
-
-
-border:1px solid rgba(255,211,105,.3);
-
-
-border-radius:22px;
-
-
-padding:30px;
-
-
-text-align:center;
-
-
-transition:.3s;
-
-
-}
-
-
-
-.extra-card:hover{
-
-
-transform:translateY(-10px);
-
-
-border-color:#00aaff;
-
-
-box-shadow:
-
-0 0 35px rgba(0,140,255,.3);
-
-
-}
-
-
-
-
-
-.extra-card h3{
-
-
-color:#ffd369;
-
-
-font-size:24px;
-
-
-margin-bottom:15px;
-
-
-}
-
-
-
-
-
-.extra-card p{
-
-
-color:#aab0c0;
-
-
-line-height:1.6;
-
-
-}
-
-
-
-
-
-.contact-box{
-
-
-max-width:800px;
-
-
-margin:50px auto;
-
-
-padding:50px;
-
-
-text-align:center;
-
-
-background:
-
-linear-gradient(
-
-145deg,
-
-#12182e,
-
-#05060d
-
-);
-
-
-
-border-radius:25px;
-
-
-border:1px solid #ffd369;
-
-
-}
-
-
-
-
-
-.contact-box h2{
-
-
-color:#ffd369;
-
-
-font-size:35px;
-
-
-}
-
-
-
-
-
-.contact-box p{
-
-
-margin-top:20px;
-
-
-color:#aaa;
-
-
-}
-
-
-
-
-
-.discord-name{
-
-
-font-size:45px;
-
-
-font-weight:900;
-
-
-margin:25px;
-
-
-color:#5865F2;
-
-
-text-shadow:
-
-0 0 25px #5865F2;
-
-
-}
-
-
-
-
-.contact-box a{
-
-
-display:inline-block;
-
-
-padding:15px 40px;
-
-
-background:#5865F2;
-
-
-color:white;
-
-
-border-radius:12px;
-
-
-text-decoration:none;
-
-
-font-weight:900;
-
-
-}
-
-
-
-</style>
 <section class="reviews">
 
 
-<h2 class="title">
+<h2 class="section-title">
 
-⭐ CUSTOMER REVIEWS
+⭐ REVIEWS
 
 </h2>
 
@@ -2211,14 +2264,12 @@ font-weight:900;
 
 
 
-<div class="review">
+<div class="review-card">
 
 ⭐⭐⭐⭐⭐
 
 <p>
-
-"Fast service and great communication."
-
+"Fast and professional PvP service."
 </p>
 
 </div>
@@ -2226,15 +2277,12 @@ font-weight:900;
 
 
 
-
-<div class="review">
+<div class="review-card">
 
 ⭐⭐⭐⭐⭐
 
 <p>
-
-"Reached my rating goal quickly."
-
+"Reached my rating goal easily."
 </p>
 
 </div>
@@ -2242,28 +2290,23 @@ font-weight:900;
 
 
 
-
-
-<div class="review">
+<div class="review-card">
 
 ⭐⭐⭐⭐⭐
 
 <p>
-
-"Professional PvP players."
-
+"Great communication on Discord."
 </p>
 
 </div>
 
 
 
-
 </div>
+
 
 
 </section>
-
 
 
 
@@ -2274,7 +2317,7 @@ font-weight:900;
 <section class="faq">
 
 
-<h2 class="title">
+<h2 class="section-title">
 
 ❓ FAQ
 
@@ -2282,50 +2325,45 @@ font-weight:900;
 
 
 
-
 <div class="faq-box">
 
 
 <h3>
-How do I order?
+How to order?
 </h3>
 
-
 <p>
-Choose your service, configure your boost and contact Discord: sonyxzc.
+Choose a boost, configure rating and contact sonyxzc.
 </p>
 
 
 
 <h3>
-What is Self Play?
+Which game version?
 </h3>
 
-
 <p>
-You play on your account together with our booster.
+World of Warcraft Retail only.
 </p>
 
 
 
 <h3>
-What is Pilot?
+What payment methods?
 </h3>
 
-
 <p>
-Our player completes the boost for you.
+Crypto payments available.
 </p>
 
 
 
 <h3>
-What is Parsec?
+Self Play or Pilot?
 </h3>
 
-
 <p>
-You can watch and control the process live.
+Both options are available. Parsec is premium option.
 </p>
 
 
@@ -2334,6 +2372,7 @@ You can watch and control the process live.
 
 
 </section>
+
 
 
 
@@ -2345,17 +2384,18 @@ You can watch and control the process live.
 
 
 <h2>
+
 ⚔️ SONY BOOST
+
 </h2>
 
 
 
 <p>
 
-Premium World of Warcraft PvP Services
+Premium World of Warcraft Retail PvP Boosting
 
 </p>
-
 
 
 
@@ -2370,13 +2410,13 @@ Discord: sonyxzc
 
 <a href="#">
 
-CONTACT NOW
+START BOOST
 
 </a>
 
 
 
-<p class="copy">
+<p class="copyright">
 
 © 2026 SONY BOOST
 
@@ -2395,9 +2435,134 @@ CONTACT NOW
 <style>
 
 
+.contact{
+
+
+max-width:900px;
+
+
+margin:80px auto;
+
+
+padding:60px;
+
+
+text-align:center;
+
+
+background:
+
+linear-gradient(
+
+145deg,
+
+#141a36,
+
+#05060d
+
+);
+
+
+border-radius:30px;
+
+
+border:1px solid #ffd369;
+
+
+}
+
+
+
+
+
+.contact h2{
+
+
+font-size:40px;
+
+
+color:#ffd369;
+
+
+}
+
+
+
+
+
+.contact p{
+
+
+margin-top:20px;
+
+
+color:#aaa;
+
+
+}
+
+
+
+
+
+.discord-big{
+
+
+font-size:55px;
+
+
+font-weight:900;
+
+
+margin:30px;
+
+
+color:#5865F2;
+
+
+text-shadow:
+
+0 0 30px #5865F2;
+
+
+}
+
+
+
+
+
+.contact a,
+footer a{
+
+
+display:inline-block;
+
+
+padding:17px 50px;
+
+
+border-radius:15px;
+
+
+background:#5865F2;
+
+
+color:white;
+
+
+text-decoration:none;
+
+
+font-weight:900;
+
+
+}
+
+
+
+
+
 .reviews,
-
-
 .faq{
 
 
@@ -2411,6 +2576,7 @@ padding:80px 50px;
 
 
 }
+
 
 
 
@@ -2435,7 +2601,7 @@ gap:30px;
 
 
 
-.review{
+.review-card{
 
 
 background:
@@ -2451,11 +2617,13 @@ linear-gradient(
 );
 
 
+padding:35px;
+
 
 border-radius:22px;
 
 
-padding:35px;
+border:1px solid rgba(255,211,105,.3);
 
 
 text-align:center;
@@ -2464,14 +2632,13 @@ text-align:center;
 font-size:25px;
 
 
-border:1px solid rgba(255,211,105,.3);
-
-
 }
 
 
 
-.review p{
+
+
+.review-card p{
 
 
 margin-top:20px;
@@ -2480,28 +2647,30 @@ margin-top:20px;
 font-size:16px;
 
 
-color:#aab0c0;
+color:#aaa;
 
 
 }
 
 
 
+
+
 .faq-box{
-
-
-background:
-
-rgba(10,12,25,.8);
-
-
-border-radius:25px;
 
 
 padding:40px;
 
 
-border:1px solid rgba(255,211,105,.25);
+background:
+
+rgba(10,15,30,.8);
+
+
+border-radius:25px;
+
+
+border:1px solid rgba(255,211,105,.3);
 
 
 }
@@ -2524,16 +2693,14 @@ margin-top:25px;
 
 
 
+
 .faq-box p{
 
 
-color:#aab0c0;
+color:#aaa;
 
 
 margin-top:10px;
-
-
-line-height:1.6;
 
 
 }
@@ -2545,24 +2712,21 @@ line-height:1.6;
 footer{
 
 
+padding:80px 20px;
+
+
 text-align:center;
-
-
-padding:70px 20px;
 
 
 background:
 
-rgba(0,0,0,.45);
+rgba(0,0,0,.5);
 
 
-border-top:
-
-1px solid rgba(255,211,105,.25);
+border-top:1px solid rgba(255,211,105,.2);
 
 
 }
-
 
 
 
@@ -2570,32 +2734,14 @@ border-top:
 footer h2{
 
 
-font-size:40px;
+font-size:45px;
 
 
 color:#ffd369;
 
 
-text-shadow:
-
-0 0 25px rgba(255,200,70,.5);
-
-
 }
 
-
-
-
-footer p{
-
-
-margin-top:15px;
-
-
-color:#aaa;
-
-
-}
 
 
 
@@ -2620,47 +2766,17 @@ color:#5865F2;
 
 
 
-footer a{
+
+.copyright{
 
 
-display:inline-block;
+margin-top:40px;
 
 
-padding:15px 45px;
-
-
-background:#5865F2;
-
-
-border-radius:14px;
-
-
-text-decoration:none;
-
-
-color:white;
-
-
-font-weight:900;
+color:#777;
 
 
 }
-
-
-
-
-.copy{
-
-
-margin-top:35px;
-
-
-font-size:14px;
-
-
-}
-
-
 
 
 </style>
