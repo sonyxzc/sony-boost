@@ -6,84 +6,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SONY BOOST | WoW Retail PvP</title>
+<title>SONY BOOST | Retail PvP</title>
 
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-
-
-html{
-    scroll-behavior:smooth;
-}
-
 
 
 body{
 
-    background:
-    radial-gradient(circle at 15% 10%, rgba(30,120,255,.25), transparent 35%),
-    radial-gradient(circle at 85% 20%, rgba(255,190,60,.18), transparent 35%),
-    linear-gradient(135deg,#05070c,#0c1220,#030409);
+background:
+radial-gradient(circle at top,#243b55,#05070b 60%);
 
-    color:white;
+color:white;
 
-    font-family: "Segoe UI", Arial, sans-serif;
-
-    min-height:100vh;
+font-family:Segoe UI,Arial,sans-serif;
 
 }
-
-
-
-body::before{
-
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.025) 1px, transparent 1px);
-
-    background-size:70px 70px;
-
-    pointer-events:none;
-
-}
-
 
 
 
 .container{
 
-    max-width:1400px;
+max-width:1400px;
 
-    margin:auto;
+margin:auto;
 
-    padding:0 50px;
+padding:0 50px;
 
 }
 
 
 
-
 header{
 
-    display:flex;
+display:flex;
 
-    justify-content:space-between;
+justify-content:space-between;
 
-    align-items:center;
+align-items:center;
 
-    padding:35px 0;
+padding:35px 0;
 
 }
 
@@ -91,66 +59,56 @@ header{
 
 .logo{
 
-    font-size:42px;
+font-size:42px;
 
-    font-weight:900;
+font-weight:900;
 
-    letter-spacing:4px;
+letter-spacing:4px;
 
-    color:#ffd369;
+color:#ffd369;
 
-    text-shadow:
-    0 0 15px rgba(255,211,105,.6);
+text-shadow:0 0 25px #ffd369;
 
 }
-
 
 
 
 .online{
 
-    padding:12px 25px;
+color:#5cff91;
 
-    border-radius:30px;
+border:1px solid #5cff91;
 
-    border:1px solid rgba(80,255,150,.5);
+padding:10px 20px;
 
-    background:rgba(80,255,150,.08);
-
-    color:#63ff9a;
-
-    font-weight:700;
+border-radius:30px;
 
 }
-
 
 
 
 
 .hero{
 
-    min-height:700px;
+min-height:650px;
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    justify-content:space-between;
+justify-content:space-between;
 
-    gap:60px;
+gap:50px;
 
 }
 
 
 
-
 .hero h1{
 
-    font-size:78px;
+font-size:75px;
 
-    line-height:1.05;
-
-    font-weight:900;
+line-height:1.05;
 
 }
 
@@ -158,13 +116,11 @@ header{
 
 .hero h1 span{
 
-    display:block;
+display:block;
 
-    color:#2997ff;
+color:#2997ff;
 
-    text-shadow:
-
-    0 0 35px rgba(41,151,255,.8);
+text-shadow:0 0 30px #2997ff;
 
 }
 
@@ -172,137 +128,95 @@ header{
 
 .hero p{
 
-    margin-top:30px;
+margin-top:30px;
 
-    max-width:600px;
+font-size:20px;
 
-    color:#b8c0d0;
+color:#b5bdcc;
 
-    font-size:21px;
+max-width:600px;
 
-    line-height:1.6;
+line-height:1.6;
 
 }
-
-
 
 
 
 .btn{
 
-    display:inline-block;
+display:inline-block;
 
-    margin-top:40px;
+margin-top:35px;
 
-    padding:18px 45px;
+padding:16px 40px;
 
-    border-radius:15px;
+border-radius:15px;
 
-    background:
+background:linear-gradient(90deg,#ffd369,#ff9f1c);
 
-    linear-gradient(90deg,#ffd369,#ff9f1c);
+color:#111;
 
-    color:#111;
+font-weight:900;
 
-    font-weight:900;
+cursor:pointer;
 
-    text-decoration:none;
-
-    cursor:pointer;
-
-    transition:.3s;
+text-decoration:none;
 
 }
 
 
 
-.btn:hover{
+.hero-card{
 
-    transform:translateY(-5px);
+width:420px;
 
-    box-shadow:
-    0 0 30px rgba(255,211,105,.5);
+height:420px;
 
-}
+border-radius:35px;
 
+background:
 
+linear-gradient(
 
+145deg,
 
-.hero-box{
+rgba(255,255,255,.15),
 
-    width:430px;
+rgba(255,255,255,.03)
 
-    height:430px;
+);
 
-    border-radius:35px;
+border:1px solid rgba(255,211,105,.3);
 
-    background:
+display:flex;
 
-    linear-gradient(
-    145deg,
-    rgba(255,255,255,.12),
-    rgba(255,255,255,.03)
-    );
+justify-content:center;
 
-    border:
+align-items:center;
 
-    1px solid rgba(255,211,105,.3);
+flex-direction:column;
 
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    flex-direction:column;
-
-
-    box-shadow:
-
-    0 0 80px rgba(41,151,255,.25);
-
-
-    animation:float 4s infinite alternate;
+box-shadow:0 0 80px rgba(41,151,255,.3);
 
 }
 
 
 
-.hero-box h2{
+.hero-card h2{
 
-    font-size:45px;
+font-size:45px;
 
-    color:#ffd369;
-
-}
-
-
-.hero-box p{
-
-    color:#2997ff;
-
-    margin-top:15px;
+color:#ffd369;
 
 }
 
 
 
+.hero-card p{
 
+color:#2997ff;
 
-@keyframes float{
-
-    from{
-
-        transform:translateY(0);
-
-    }
-
-    to{
-
-        transform:translateY(-20px);
-
-    }
+margin-top:15px;
 
 }
 
@@ -311,47 +225,41 @@ header{
 
 @media(max-width:900px){
 
-
 .container{
 
-    padding:0 20px;
+padding:0 20px;
 
 }
-
 
 
 .hero{
 
-    flex-direction:column;
+flex-direction:column;
 
-    text-align:center;
+text-align:center;
 
 }
-
 
 
 .hero h1{
 
-    font-size:45px;
+font-size:45px;
 
 }
 
 
+.hero-card{
 
-.hero-box{
+width:300px;
 
-    width:300px;
+height:300px;
 
-    height:300px;
+}
 
 }
 
-
-
-}
 
 </style>
-
 
 </head>
 
@@ -371,12 +279,11 @@ SONY BOOST
 
 
 <div class="online">
-🟢 Support Online
+🟢 ONLINE SUPPORT
 </div>
 
 
 </header>
-
 
 
 
@@ -401,19 +308,17 @@ RETAIL PVP BOOST
 
 <p>
 
-Premium PvP boosting service.
-Arena, Blitz and RBG rating progression with experienced players.
+Professional PvP boosting service.
+Arena, Blitz and RBG rating progression.
 
 </p>
 
 
-
-<a class="btn" href="#services">
+<a href="#services" class="btn">
 
 CONFIGURE BOOST
 
 </a>
-
 
 
 </div>
@@ -421,8 +326,7 @@ CONFIGURE BOOST
 
 
 
-
-<div class="hero-box">
+<div class="hero-card">
 
 
 <h2>
@@ -439,11 +343,7 @@ PvP Division
 
 
 
-
 </section>
-
-
-
 
 <section id="services" class="services">
 
@@ -453,16 +353,12 @@ BOOST SERVICES
 </h2>
 
 
-
 <div class="cards">
 
 
+<div class="card">
 
-<div class="card" onclick="selectService('Arena')">
-
-<h3>
-Arena Boost
-</h3>
+<h3>Arena Boost</h3>
 
 <p>
 2v2 / 3v3 Rating Push
@@ -472,12 +368,9 @@ Arena Boost
 
 
 
+<div class="card">
 
-<div class="card" onclick="selectService('Blitz')">
-
-<h3>
-Blitz Boost
-</h3>
+<h3>Blitz Boost</h3>
 
 <p>
 Rated Battlegrounds
@@ -488,11 +381,9 @@ Rated Battlegrounds
 
 
 
-<div class="card" onclick="selectService('RBG')">
+<div class="card">
 
-<h3>
-RBG Boost
-</h3>
+<h3>RBG Boost</h3>
 
 <p>
 Team PvP Progress
@@ -503,14 +394,12 @@ Team PvP Progress
 
 
 
-<div class="card" onclick="selectService('Gladiator')">
+<div class="card">
 
-<h3>
-Gladiator Push
-</h3>
+<h3>Gladiator Push</h3>
 
 <p>
-High Rating Goals
+Elite Rating Goals
 </p>
 
 </div>
@@ -518,26 +407,21 @@ High Rating Goals
 
 
 
-<div class="card" onclick="selectService('Coaching')">
+<div class="card">
 
-<h3>
-Coaching
-</h3>
+<h3>Coaching</h3>
 
 <p>
-Improve Gameplay
+Improve Your Gameplay
 </p>
 
 </div>
 
 
 
+<div class="card">
 
-<div class="card" onclick="selectService('Gear')">
-
-<h3>
-PvP Gear
-</h3>
+<h3>PvP Gear</h3>
 
 <p>
 Honor / Conquest Gear
@@ -546,12 +430,10 @@ Honor / Conquest Gear
 </div>
 
 
-
 </div>
 
 
 </section>
-
 
 
 
@@ -560,9 +442,11 @@ Honor / Conquest Gear
 
 <section id="calculator" class="calculator">
 
+
 <h2>
 BOOST CALCULATOR
 </h2>
+
 
 
 <div class="calc-box">
@@ -572,130 +456,36 @@ BOOST CALCULATOR
 Service
 </label>
 
+
 <select id="service">
+
 
 <option value="arena">
-Arena Boost
+Arena
 </option>
+
 
 <option value="blitz">
-Blitz Boost
+Blitz
 </option>
+
 
 <option value="rbg">
-RBG Boost
+RBG
 </option>
 
+
 </select>
+
 
 
 
 <label>
 Current Rating
 </label>
+
 
 <input id="current" type="number" value="0">
-
-
-
-<label>
-Target Rating
-</label>
-
-<input id="target" type="number" value="2400">
-
-
-
-<label>
-Method
-</label>
-
-<select id="method">
-
-<option value="1">
-Self Play
-</option>
-
-<option value="1.25">
-Pilot
-</option>
-
-<option value="1.5">
-Parsec
-</option>
-
-</select>
-
-
-
-<div class="result">
-
-TOTAL PRICE
-
-<br>
-
-<span id="price">
-0
-</span>
-
-$
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<h2>
-BOOST CALCULATOR
-</h2>
-
-
-
-<div class="calc-box">
-
-
-
-<label>
-Service
-</label>
-
-
-<select id="service">
-
-
-<option value="Arena">
-Arena Boost
-</option>
-
-
-<option value="Blitz">
-Blitz Boost
-</option>
-
-
-<option value="RBG">
-RBG Boost
-</option>
-
-
-</select>
-
-
-
-
-
-<label>
-Current Rating
-</label>
-
-
-<input id="current" type="number" value="1800">
-
-
 
 
 
@@ -737,32 +527,24 @@ Parsec
 
 
 
+<div class="price-box">
 
 
-<div class="result">
-
-
-Estimated Price:
+PRICE:
 
 <br>
 
-<span id="price">
-250
+<strong>
+
+$<span id="price">
+0
 </span>
 
-$
+</strong>
+
 
 </div>
 
-
-
-
-
-<a class="btn" onclick="contact()">
-
-CONTACT SONYXZC
-
-</a>
 
 
 </div>
@@ -783,23 +565,14 @@ CONTACT SONYXZC
 .services,
 .calculator{
 
-
-max-width:1400px;
-
-margin:auto;
-
-padding:80px 50px;
-
+padding:80px 0;
 
 }
 
 
 
-
-
 .services h2,
 .calculator h2{
-
 
 text-align:center;
 
@@ -807,7 +580,7 @@ font-size:55px;
 
 color:#ffd369;
 
-margin-bottom:50px;
+margin-bottom:45px;
 
 }
 
@@ -816,86 +589,55 @@ margin-bottom:50px;
 
 .cards{
 
-
 display:grid;
 
 grid-template-columns:
-
 repeat(auto-fit,minmax(280px,1fr));
 
 gap:30px;
 
-
 }
-
 
 
 
 
 .card{
 
-
 padding:35px;
-
-
-background:
-
-linear-gradient(
-
-145deg,
-
-rgba(255,255,255,.12),
-
-rgba(255,255,255,.03)
-
-);
-
-
 
 border-radius:25px;
 
+background:
+
+rgba(255,255,255,.07);
 
 border:1px solid rgba(255,211,105,.25);
 
-
-cursor:pointer;
-
-
 transition:.3s;
 
-
 }
-
-
 
 
 
 .card:hover{
 
-
 transform:translateY(-10px);
-
 
 border-color:#2997ff;
 
-
 box-shadow:
 
-0 0 40px rgba(41,151,255,.35);
-
+0 0 35px rgba(41,151,255,.4);
 
 }
 
 
 
-
 .card h3{
-
 
 font-size:30px;
 
 color:#ffd369;
-
 
 }
 
@@ -903,36 +645,30 @@ color:#ffd369;
 
 .card p{
 
-
 margin-top:15px;
 
-color:#b8c0d0;
+color:#b5bdcc;
 
 }
 
 
 
 
-
 .calc-box{
-
 
 max-width:600px;
 
 margin:auto;
 
-
 padding:40px;
 
+background:
+
+rgba(255,255,255,.07);
 
 border-radius:25px;
 
-
-background:rgba(255,255,255,.06);
-
-
-border:1px solid rgba(255,211,105,.3);
-
+border:1px solid rgba(255,211,105,.25);
 
 }
 
@@ -941,18 +677,15 @@ border:1px solid rgba(255,211,105,.3);
 
 .calc-box label{
 
-
 display:block;
 
 margin-top:20px;
 
 margin-bottom:8px;
 
-color:#b8c0d0;
-
+color:#b5bdcc;
 
 }
-
 
 
 
@@ -966,47 +699,245 @@ padding:15px;
 
 border-radius:12px;
 
-
-background:#070b14;
-
+background:#070a12;
 
 color:white;
 
-
 border:1px solid #2997ff;
-
 
 font-size:18px;
 
-
 }
 
 
 
 
-.result{
-
-
-margin-top:40px;
+.price-box{
 
 text-align:center;
 
-font-size:25px;
+margin-top:40px;
 
+font-size:25px;
 
 }
 
 
 
-.result span{
+.price-box strong{
+
+font-size:70px;
+
+color:#5cff91;
+
+}
 
 
-font-size:65px;
 
-font-weight:900;
+</style>
 
-color:#63ff9a;
+<section class="contact">
 
+
+<h2>
+CONTACT
+</h2>
+
+
+<div class="contact-box">
+
+
+<h3>
+SONY BOOST SUPPORT
+</h3>
+
+
+<p>
+🟢 Online now
+</p>
+
+
+<p>
+Discord:
+<strong>
+sonyxzc
+</strong>
+</p>
+
+
+<a class="btn" onclick="contact()">
+CONTACT
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="faq">
+
+
+<h2>
+FAQ
+</h2>
+
+
+<div class="faq-box">
+
+
+<h3>
+Supported version?
+</h3>
+
+<p>
+World of Warcraft Retail only.
+</p>
+
+
+<h3>
+Boost methods?
+</h3>
+
+<p>
+Self Play, Pilot and Parsec.
+</p>
+
+
+<h3>
+How to order?
+</h3>
+
+<p>
+Choose your rating goal and contact Discord.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<style>
+
+
+.contact,
+.faq{
+
+padding:80px 0;
+
+}
+
+
+
+.contact h2,
+.faq h2{
+
+text-align:center;
+
+font-size:55px;
+
+color:#ffd369;
+
+margin-bottom:40px;
+
+}
+
+
+
+.contact-box,
+.faq-box{
+
+max-width:700px;
+
+margin:auto;
+
+padding:40px;
+
+border-radius:25px;
+
+background:
+
+rgba(255,255,255,.07);
+
+border:1px solid rgba(255,211,105,.25);
+
+text-align:center;
+
+}
+
+
+
+.contact-box h3{
+
+font-size:35px;
+
+color:#ffd369;
+
+margin-bottom:25px;
+
+}
+
+
+
+.contact-box p{
+
+margin:15px;
+
+font-size:20px;
+
+color:#b5bdcc;
+
+}
+
+
+
+.faq-box{
+
+text-align:left;
+
+}
+
+
+
+.faq-box h3{
+
+color:#ffd369;
+
+margin-top:25px;
+
+}
+
+
+
+.faq-box p{
+
+color:#b5bdcc;
+
+margin-top:10px;
+
+}
+
+
+
+
+footer{
+
+padding:50px 0;
+
+text-align:center;
+
+color:#777;
 
 }
 
@@ -1018,80 +949,22 @@ color:#63ff9a;
 
 
 
+
 <script>
 
 
-let selectedService="Arena";
-
-
-
-function selectService(name){
-
-selectedService=name;
-
-document.getElementById("service").value=name;
-
-
-}
-
-
-
-
-function calculate(){
-
-
-let service =
-document.getElementById("service").value;
-
-
-
-let current =
-Number(document.getElementById("current").value);
-
-
-
-let target =
-Number(document.getElementById("target").value);
-
-
-
-let multiplier =
-Number(document.getElementById("method").value);
-
-
-
-if(target <= current){
-
-document.getElementById("price").innerHTML = 0;
-
-return;
-
-}
-
-
-
-let price = 0;
-
-
-
-let tables = {
+const priceTable = {
 
 
 arena:[
 
 [0,1400,80],
-
 [1400,1600,60],
-
 [1600,1800,90],
-
-[1800,2000,120],
-
-[2000,2200,160],
-
-[2200,2400,220],
-
-[2400,2600,300]
+[1800,2000,130],
+[2000,2200,170],
+[2200,2400,230],
+[2400,2600,320]
 
 ],
 
@@ -1099,18 +972,12 @@ arena:[
 blitz:[
 
 [0,1400,100],
-
 [1400,1600,80],
-
-[1600,1800,110],
-
-[1800,2000,150],
-
-[2000,2200,200],
-
-[2200,2400,280],
-
-[2400,2600,380]
+[1600,1800,120],
+[1800,2000,160],
+[2000,2200,220],
+[2200,2400,300],
+[2400,2600,400]
 
 ],
 
@@ -1118,17 +985,11 @@ blitz:[
 rbg:[
 
 [0,1400,120],
-
 [1400,1600,100],
-
-[1600,1800,140],
-
-[1800,2000,190],
-
-[2000,2200,250],
-
-[2200,2400,350],
-
+[1600,1800,150],
+[1800,2000,200],
+[2000,2200,270],
+[2200,2400,360],
 [2400,2600,500]
 
 ]
@@ -1139,75 +1000,14 @@ rbg:[
 
 
 
-let steps = tables[service];
+
+function calculatePrice(){
 
 
 
-steps.forEach(step=>{
+let service =
+document.getElementById("service").value;
 
-
-let from = step[0];
-
-let to = step[1];
-
-let cost = step[2];
-
-
-
-let start = Math.max(current,from);
-
-let end = Math.min(target,to);
-
-
-
-if(end > start){
-
-price += cost;
-
-}
-
-
-
-});
-
-
-
-
-price = Math.round(price * multiplier);
-
-
-
-document.getElementById("price").innerHTML = price;
-
-
-}
-
-
-
-
-
-document
-.querySelectorAll("#service,#current,#target,#method")
-.forEach(el=>{
-
-
-el.addEventListener(
-"input",
-calculate
-);
-
-
-el.addEventListener(
-"change",
-calculate
-);
-
-
-});
-
-
-
-calculate();
 
 
 let current =
@@ -1225,65 +1025,50 @@ Number(document.getElementById("method").value);
 
 
 
-let service =
-document.getElementById("service").value;
+let total=0;
 
 
 
-let rating = target-current;
+if(target<=current){
 
+document.getElementById("price").innerHTML=0;
 
-
-let price=0;
-
-
-
-if(rating<=0){
-
-price=0;
-
-}
-
-else{
-
-
-if(service=="Arena"){
-
-
-price = 50 + (rating/100)*35;
-
+return;
 
 }
 
 
 
-if(service=="Blitz"){
+
+priceTable[service].forEach(step=>{
 
 
-price = 60 + (rating/100)*40;
+let start =
+Math.max(current,step[0]);
 
 
-}
+let end =
+Math.min(target,step[1]);
 
 
 
-if(service=="RBG"){
+if(end>start){
 
-
-price = 80 + (rating/100)*50;
-
-
-}
-
+total += step[2];
 
 }
 
 
-price = Math.round(price*method);
+});
 
 
 
-document.getElementById("price").innerHTML=price;
+total = Math.round(total * method);
+
+
+
+document.getElementById("price").innerHTML=total;
+
 
 
 }
@@ -1292,20 +1077,20 @@ document.getElementById("price").innerHTML=price;
 
 
 
-document.querySelectorAll(
-"#current,#target,#method,#service"
-).forEach(item=>{
+document
+.querySelectorAll("#service,#current,#target,#method")
+.forEach(element=>{
 
 
-item.addEventListener(
+element.addEventListener(
 "input",
-calculate
+calculatePrice
 );
 
 
-item.addEventListener(
+element.addEventListener(
 "change",
-calculate
+calculatePrice
 );
 
 
@@ -1313,7 +1098,7 @@ calculate
 
 
 
-calculate();
+calculatePrice();
 
 
 
@@ -1321,11 +1106,9 @@ calculate();
 
 function contact(){
 
-
 alert(
 "Discord: sonyxzc"
 );
-
 
 }
 
@@ -1336,319 +1119,16 @@ alert(
 
 
 
-<section id="contact" class="contact">
-
-
-<h2>
-CONTACT
-</h2>
-
-
-<div class="contact-box">
-
-
-<h3>
-SONY BOOST SUPPORT
-</h3>
-
-
-<p>
-🟢 Online Support
-</p>
-
-
-<p>
-Discord:
-<strong>
-sonyxzc
-</strong>
-</p>
-
-
-<p>
-Average response time:
-<br>
-Less than 5 minutes
-</p>
-
-
-<a class="btn" onclick="contact()">
-OPEN DISCORD
-</a>
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-<section class="faq">
-
-
-<h2>
-FAQ
-</h2>
-
-
-
-<div class="faq-box">
-
-
-<h3>
-Which WoW version do you support?
-</h3>
-
-
-<p>
-World of Warcraft Retail only.
-</p>
-
-
-
-<h3>
-Which boosting methods are available?
-</h3>
-
-
-<p>
-Self Play, Pilot and Parsec.
-</p>
-
-
-
-<h3>
-How can I order?
-</h3>
-
-
-<p>
-Configure your boost and contact SONYXZC on Discord.
-</p>
-
-
-
-<h3>
-Is my account safe?
-</h3>
-
-
-<p>
-All boosts are handled carefully by experienced players.
-</p>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
 
 <footer>
 
-
-<div class="logo">
-SONY BOOST
-</div>
-
-
-<p>
-World of Warcraft Retail PvP Services
-</p>
-
-
-<p>
-© 2026 SONY BOOST
-</p>
-
+SONY BOOST © 2026
 
 </footer>
 
 
 
-
-
-
-
-<style>
-
-
-.contact,
-.faq{
-
-
-max-width:1000px;
-
-margin:auto;
-
-padding:90px 40px;
-
-
-}
-
-
-
-
-.contact h2,
-.faq h2{
-
-
-text-align:center;
-
-font-size:55px;
-
-color:#ffd369;
-
-margin-bottom:40px;
-
-
-}
-
-
-
-
-.contact-box,
-.faq-box{
-
-
-padding:40px;
-
-
-border-radius:25px;
-
-
-background:
-
-rgba(255,255,255,.06);
-
-
-
-border:
-
-1px solid rgba(255,211,105,.3);
-
-
-
-text-align:center;
-
-
-}
-
-
-
-
-
-.contact-box h3{
-
-
-font-size:35px;
-
-color:#ffd369;
-
-margin-bottom:25px;
-
-
-}
-
-
-
-.contact-box p{
-
-
-margin:15px;
-
-font-size:20px;
-
-color:#b8c0d0;
-
-
-}
-
-
-
-
-.faq-box{
-
-
-text-align:left;
-
-
-}
-
-
-
-.faq-box h3{
-
-
-color:#ffd369;
-
-font-size:25px;
-
-margin-top:25px;
-
-
-}
-
-
-
-.faq-box p{
-
-
-color:#b8c0d0;
-
-margin-top:10px;
-
-
-}
-
-
-
-
-footer{
-
-
-padding:60px;
-
-text-align:center;
-
-
-border-top:
-
-1px solid rgba(255,255,255,.1);
-
-
-color:#8891a5;
-
-
-}
-
-
-
-footer .logo{
-
-
-margin-bottom:20px;
-
-}
-
-
-
-</style>
-
-
-
+</div>
 
 
 </body>
