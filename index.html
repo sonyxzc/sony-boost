@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SONY BOOST | Retail PvP</title>
+<title>SONY BOOST | WoW Retail PvP</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,55 +17,70 @@
     box-sizing:border-box;
 }
 
-body{
 
-    background:
-    radial-gradient(circle at 20% 20%, rgba(0,120,255,.25), transparent 35%),
-    radial-gradient(circle at 80% 30%, rgba(255,180,60,.15), transparent 30%),
-    linear-gradient(135deg,#05060b,#111827,#030409);
-
-    color:white;
-    font-family:Inter,sans-serif;
-    min-height:100vh;
+html{
+    scroll-behavior:smooth;
 }
 
 
-body:before{
 
-    content:"";
-    position:fixed;
-    inset:0;
+body{
 
     background:
-    linear-gradient(
-    rgba(255,255,255,.025) 1px,
-    transparent 1px),
-    linear-gradient(
-    90deg,
-    rgba(255,255,255,.025) 1px,
-    transparent 1px);
+    radial-gradient(circle at 15% 10%, rgba(30,120,255,.25), transparent 35%),
+    radial-gradient(circle at 85% 20%, rgba(255,190,60,.18), transparent 35%),
+    linear-gradient(135deg,#05070c,#0c1220,#030409);
 
-    background-size:60px 60px;
+    color:white;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    min-height:100vh;
+
+}
+
+
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px, transparent 1px);
+
+    background-size:70px 70px;
+
     pointer-events:none;
 
 }
 
 
 
+
 .container{
 
     max-width:1400px;
+
     margin:auto;
+
     padding:0 50px;
 
 }
 
 
 
+
 header{
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     padding:35px 0;
@@ -76,33 +91,39 @@ header{
 
 .logo{
 
-    font-family:Cinzel,serif;
     font-size:42px;
+
     font-weight:900;
 
-    color:#f5c76a;
+    letter-spacing:4px;
+
+    color:#ffd369;
 
     text-shadow:
-    0 0 25px rgba(245,199,106,.5);
+    0 0 15px rgba(255,211,105,.6);
 
 }
 
 
 
-.status{
+
+.online{
 
     padding:12px 25px;
+
     border-radius:30px;
 
-    background:rgba(0,255,120,.1);
+    border:1px solid rgba(80,255,150,.5);
 
-    border:1px solid rgba(0,255,120,.3);
+    background:rgba(80,255,150,.08);
 
-    color:#4cff8a;
+    color:#63ff9a;
 
-    font-weight:800;
+    font-weight:700;
 
 }
+
+
 
 
 
@@ -111,22 +132,25 @@ header{
     min-height:700px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
-    gap:50px;
+    gap:60px;
 
 }
 
 
 
+
 .hero h1{
 
-    font-family:Cinzel,serif;
-
-    font-size:80px;
+    font-size:78px;
 
     line-height:1.05;
+
+    font-weight:900;
 
 }
 
@@ -134,10 +158,13 @@ header{
 
 .hero h1 span{
 
-    color:#198cff;
+    display:block;
+
+    color:#2997ff;
 
     text-shadow:
-    0 0 35px rgba(25,140,255,.7);
+
+    0 0 35px rgba(41,151,255,.8);
 
 }
 
@@ -149,9 +176,9 @@ header{
 
     max-width:600px;
 
-    font-size:21px;
+    color:#b8c0d0;
 
-    color:#b5bac8;
+    font-size:21px;
 
     line-height:1.6;
 
@@ -159,65 +186,82 @@ header{
 
 
 
-.buttons{
-
-    margin-top:40px;
-
-}
 
 
-
-.main-btn{
+.btn{
 
     display:inline-block;
+
+    margin-top:40px;
 
     padding:18px 45px;
 
     border-radius:15px;
 
     background:
-    linear-gradient(90deg,#198cff,#5865f2);
 
-    color:white;
+    linear-gradient(90deg,#ffd369,#ff9f1c);
 
-    text-decoration:none;
+    color:#111;
 
     font-weight:900;
 
-    box-shadow:
-    0 0 40px rgba(25,140,255,.5);
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:.3s;
 
 }
 
 
 
-.panel{
+.btn:hover{
 
-    width:420px;
-    height:420px;
+    transform:translateY(-5px);
 
-    border-radius:30px;
+    box-shadow:
+    0 0 30px rgba(255,211,105,.5);
+
+}
+
+
+
+
+.hero-box{
+
+    width:430px;
+
+    height:430px;
+
+    border-radius:35px;
 
     background:
 
     linear-gradient(
     145deg,
-    rgba(255,255,255,.08),
-    rgba(255,255,255,.02)
+    rgba(255,255,255,.12),
+    rgba(255,255,255,.03)
     );
 
     border:
-    1px solid rgba(255,215,100,.3);
+
+    1px solid rgba(255,211,105,.3);
+
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
-    font-size:120px;
+    flex-direction:column;
+
 
     box-shadow:
-    0 0 80px rgba(0,120,255,.25);
+
+    0 0 80px rgba(41,151,255,.25);
+
 
     animation:float 4s infinite alternate;
 
@@ -225,14 +269,39 @@ header{
 
 
 
+.hero-box h2{
+
+    font-size:45px;
+
+    color:#ffd369;
+
+}
+
+
+.hero-box p{
+
+    color:#2997ff;
+
+    margin-top:15px;
+
+}
+
+
+
+
+
 @keyframes float{
 
     from{
+
         transform:translateY(0);
+
     }
 
     to{
+
         transform:translateY(-20px);
+
     }
 
 }
@@ -242,30 +311,47 @@ header{
 
 @media(max-width:900px){
 
+
+.container{
+
+    padding:0 20px;
+
+}
+
+
+
 .hero{
 
     flex-direction:column;
+
     text-align:center;
 
 }
 
+
+
 .hero h1{
 
-    font-size:50px;
+    font-size:45px;
 
 }
 
-.panel{
+
+
+.hero-box{
 
     width:300px;
+
     height:300px;
 
 }
 
+
+
 }
 
-
 </style>
+
 
 </head>
 
@@ -278,14 +364,16 @@ header{
 
 <header>
 
+
 <div class="logo">
 SONY BOOST
 </div>
 
 
-<div class="status">
-🟢 ONLINE SUPPORT
+<div class="online">
+🟢 Support Online
 </div>
+
 
 </header>
 
@@ -297,15 +385,18 @@ SONY BOOST
 
 <div>
 
+
 <h1>
 
 WORLD OF WARCRAFT
 
 <span>
-RETAIL PVP
+RETAIL PVP BOOST
 </span>
 
+
 </h1>
+
 
 
 <p>
@@ -316,13 +407,13 @@ Arena, Blitz and RBG rating progression with experienced players.
 </p>
 
 
-<div class="buttons">
 
-<a class="main-btn" href="#services">
+<a class="btn" href="#services">
+
 CONFIGURE BOOST
+
 </a>
 
-</div>
 
 
 </div>
@@ -330,11 +421,22 @@ CONFIGURE BOOST
 
 
 
-<div class="panel">
 
-⚔️
+<div class="hero-box">
+
+
+<h2>
+SONY BOOST
+</h2>
+
+
+<p>
+PvP Division
+</p>
+
 
 </div>
+
 
 
 
@@ -342,12 +444,7 @@ CONFIGURE BOOST
 
 
 
-</div>
 
-
-</body>
-
-</html>
 <section id="services" class="services">
 
 
@@ -356,118 +453,98 @@ BOOST SERVICES
 </h2>
 
 
+
 <div class="cards">
 
 
-<div class="card" onclick="openService('Arena Boost')">
 
-<div class="icon">ARENA</div>
+<div class="card" onclick="selectService('Arena')">
 
-<h3>Arena Boost</h3>
+<h3>
+Arena Boost
+</h3>
 
 <p>
 2v2 / 3v3 Rating Push
 </p>
 
-<button>
-CONFIGURE
-</button>
-
 </div>
 
 
 
-<div class="card" onclick="openService('Blitz Boost')">
 
-<div class="icon">BLITZ</div>
+<div class="card" onclick="selectService('Blitz')">
 
-<h3>Blitz Boost</h3>
+<h3>
+Blitz Boost
+</h3>
 
 <p>
-Rated Battleground Progress
+Rated Battlegrounds
 </p>
-
-<button>
-CONFIGURE
-</button>
 
 </div>
 
 
 
 
-<div class="card" onclick="openService('RBG Boost')">
+<div class="card" onclick="selectService('RBG')">
 
-<div class="icon">RBG</div>
-
-<h3>RBG Boost</h3>
+<h3>
+RBG Boost
+</h3>
 
 <p>
 Team PvP Progress
 </p>
 
-<button>
-CONFIGURE
-</button>
-
 </div>
 
 
 
 
-<div class="card" onclick="openService('Gladiator')">
+<div class="card" onclick="selectService('Gladiator')">
 
-<div class="icon">ELITE</div>
-
-<h3>Gladiator Push</h3>
+<h3>
+Gladiator Push
+</h3>
 
 <p>
 High Rating Goals
 </p>
 
-<button>
-CONFIGURE
-</button>
-
 </div>
 
 
 
 
-<div class="card" onclick="openService('Coaching')">
+<div class="card" onclick="selectService('Coaching')">
 
-<div class="icon">COACH</div>
-
-<h3>Coaching</h3>
+<h3>
+Coaching
+</h3>
 
 <p>
-Improve Your Gameplay
+Improve Gameplay
 </p>
-
-<button>
-CONFIGURE
-</button>
 
 </div>
 
 
 
 
-<div class="card" onclick="openService('Gear')">
+<div class="card" onclick="selectService('Gear')">
 
-<div class="icon">GEAR</div>
-
-<h3>Gear Boost</h3>
+<h3>
+PvP Gear
+</h3>
 
 <p>
-Fast PvP Equipment
+Honor / Conquest Gear
 </p>
 
-<button>
-CONFIGURE
-</button>
-
 </div>
+
 
 
 </div>
@@ -479,36 +556,133 @@ CONFIGURE
 
 
 
-<div id="popup" class="popup">
 
 
-<div class="popup-box">
+<section id="calculator" class="calculator">
 
 
-<span onclick="closePopup()" class="close">
-×
-</span>
-
-
-<h2 id="serviceName">
-Arena Boost
+<h2>
+BOOST CALCULATOR
 </h2>
 
 
-<p>
-Configure your boost and calculate price.
-</p>
+
+<div class="calc-box">
 
 
-<button class="main-btn">
-CONTINUE
-</button>
+
+<label>
+Service
+</label>
+
+
+<select id="service">
+
+
+<option value="Arena">
+Arena Boost
+</option>
+
+
+<option value="Blitz">
+Blitz Boost
+</option>
+
+
+<option value="RBG">
+RBG Boost
+</option>
+
+
+</select>
+
+
+
+
+
+<label>
+Current Rating
+</label>
+
+
+<input id="current" type="number" value="1800">
+
+
+
+
+
+<label>
+Target Rating
+</label>
+
+
+<input id="target" type="number" value="2400">
+
+
+
+
+
+<label>
+Boost Method
+</label>
+
+
+<select id="method">
+
+
+<option value="1">
+Self Play
+</option>
+
+
+<option value="1.25">
+Pilot
+</option>
+
+
+<option value="1.5">
+Parsec
+</option>
+
+
+</select>
+
+
+
+
+
+<div class="result">
+
+
+Estimated Price:
+
+<br>
+
+<span id="price">
+250
+</span>
+
+$
+
+</div>
+
+
+
+
+
+<a class="btn" onclick="contact()">
+
+CONTACT SONYXZC
+
+</a>
 
 
 </div>
 
 
-</div>
+
+</section>
+
 
 
 
@@ -518,7 +692,9 @@ CONTINUE
 <style>
 
 
-.services{
+.services,
+.calculator{
+
 
 max-width:1400px;
 
@@ -526,19 +702,22 @@ margin:auto;
 
 padding:80px 50px;
 
+
 }
 
 
 
-.services h2{
 
-font-family:Cinzel,serif;
 
-font-size:55px;
+.services h2,
+.calculator h2{
+
 
 text-align:center;
 
-color:#f5c76a;
+font-size:55px;
+
+color:#ffd369;
 
 margin-bottom:50px;
 
@@ -549,46 +728,57 @@ margin-bottom:50px;
 
 .cards{
 
+
 display:grid;
 
 grid-template-columns:
+
 repeat(auto-fit,minmax(280px,1fr));
 
 gap:30px;
 
+
 }
+
 
 
 
 
 .card{
 
-padding:35px;
 
-border-radius:25px;
+padding:35px;
 
 
 background:
 
 linear-gradient(
+
 145deg,
-rgba(255,255,255,.08),
-rgba(255,255,255,.02)
+
+rgba(255,255,255,.12),
+
+rgba(255,255,255,.03)
+
 );
 
 
-border:
 
-1px solid rgba(245,199,106,.3);
+border-radius:25px;
 
 
-transition:.3s;
+border:1px solid rgba(255,211,105,.25);
 
 
 cursor:pointer;
 
 
+transition:.3s;
+
+
 }
+
+
 
 
 
@@ -598,33 +788,16 @@ cursor:pointer;
 transform:translateY(-10px);
 
 
-border-color:#198cff;
+border-color:#2997ff;
 
 
 box-shadow:
 
-0 0 40px rgba(25,140,255,.35);
+0 0 40px rgba(41,151,255,.35);
 
 
 }
 
-
-
-.icon{
-
-
-font-size:22px;
-
-letter-spacing:3px;
-
-color:#198cff;
-
-font-weight:900;
-
-margin-bottom:20px;
-
-
-}
 
 
 
@@ -633,7 +806,8 @@ margin-bottom:20px;
 
 font-size:30px;
 
-color:#f5c76a;
+color:#ffd369;
+
 
 }
 
@@ -642,37 +816,9 @@ color:#f5c76a;
 .card p{
 
 
-color:#aeb5c4;
+margin-top:15px;
 
-margin:20px 0;
-
-font-size:17px;
-
-
-}
-
-
-
-.card button{
-
-
-padding:14px 30px;
-
-
-border-radius:12px;
-
-
-border:0;
-
-
-background:#f5c76a;
-
-
-font-weight:900;
-
-
-cursor:pointer;
-
+color:#b8c0d0;
 
 }
 
@@ -680,69 +826,98 @@ cursor:pointer;
 
 
 
-.popup{
+.calc-box{
 
 
-display:none;
+max-width:600px;
 
-
-position:fixed;
-
-
-inset:0;
-
-
-background:rgba(0,0,0,.75);
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-z-index:10;
-
-
-}
-
-
-
-.popup-box{
-
-
-width:450px;
+margin:auto;
 
 
 padding:40px;
 
 
-background:#111827;
-
-
 border-radius:25px;
 
 
-border:1px solid #f5c76a;
+background:rgba(255,255,255,.06);
 
 
-text-align:center;
+border:1px solid rgba(255,211,105,.3);
 
 
 }
 
 
 
-.close{
+
+.calc-box label{
 
 
-position:absolute;
+display:block;
+
+margin-top:20px;
+
+margin-bottom:8px;
+
+color:#b8c0d0;
 
 
-font-size:35px;
+}
 
 
-cursor:pointer;
+
+
+.calc-box input,
+.calc-box select{
+
+
+width:100%;
+
+padding:15px;
+
+border-radius:12px;
+
+
+background:#070b14;
+
+
+color:white;
+
+
+border:1px solid #2997ff;
+
+
+font-size:18px;
+
+
+}
+
+
+
+
+.result{
+
+
+margin-top:40px;
+
+text-align:center;
+
+font-size:25px;
+
+
+}
+
+
+
+.result span{
+
+
+font-size:65px;
+
+font-weight:900;
+
+color:#63ff9a;
 
 
 }
@@ -755,156 +930,155 @@ cursor:pointer;
 
 
 
-
-
 <script>
 
 
-function openService(name){
+let selectedService="Arena";
 
 
-document.getElementById("popup").style.display="flex";
+
+function selectService(name){
+
+selectedService=name;
+
+document.getElementById("service").value=name;
 
 
-document.getElementById("serviceName").innerText=name;
+}
+
+
+
+
+function calculate(){
+
+
+let current =
+Number(document.getElementById("current").value);
+
+
+
+let target =
+Number(document.getElementById("target").value);
+
+
+
+let method =
+Number(document.getElementById("method").value);
+
+
+
+let service =
+document.getElementById("service").value;
+
+
+
+let rating = target-current;
+
+
+
+let price=0;
+
+
+
+if(rating<=0){
+
+price=0;
+
+}
+
+else{
+
+
+if(service=="Arena"){
+
+
+price = 50 + (rating/100)*35;
 
 
 }
 
 
 
-function closePopup(){
+if(service=="Blitz"){
 
 
-document.getElementById("popup").style.display="none";
+price = 60 + (rating/100)*40;
 
 
 }
+
+
+
+if(service=="RBG"){
+
+
+price = 80 + (rating/100)*50;
+
+
+}
+
+
+}
+
+
+price = Math.round(price*method);
+
+
+
+document.getElementById("price").innerHTML=price;
+
+
+}
+
+
+
+
+
+document.querySelectorAll(
+"#current,#target,#method,#service"
+).forEach(item=>{
+
+
+item.addEventListener(
+"input",
+calculate
+);
+
+
+item.addEventListener(
+"change",
+calculate
+);
+
+
+});
+
+
+
+calculate();
+
+
+
+
+
+function contact(){
+
+
+alert(
+"Discord: sonyxzc"
+);
+
+
+}
+
 
 
 </script>
-<section class="calculator">
 
 
-<h2>
-BOOST CALCULATOR
-</h2>
 
 
-
-<div class="calc">
-
-
-<label>
-Service
-</label>
-
-
-<select id="calcService">
-
-<option value="arena">
-Arena Boost
-</option>
-
-<option value="blitz">
-Blitz Boost
-</option>
-
-</select>
-
-
-
-
-<label>
-Current Rating
-</label>
-
-<input 
-type="number"
-id="currentRating"
-value="1800">
-
-
-
-
-
-<label>
-Target Rating
-</label>
-
-<input 
-type="number"
-id="targetRating"
-value="2400">
-
-
-
-
-
-<label>
-Method
-</label>
-
-
-<select id="method">
-
-
-<option value="1">
-Self Play
-</option>
-
-
-<option value="1.2">
-Pilot
-</option>
-
-
-<option value="1.35">
-Parsec
-</option>
-
-
-</select>
-
-
-
-
-<div class="price">
-
-Estimated Price:
-
-<strong>
-$<span id="price">
-250
-</span>
-</strong>
-
-
-</div>
-
-
-
-
-<button class="main-btn">
-
-CONTACT SONYXZC
-
-</button>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="contact">
+<section id="contact" class="contact">
 
 
 <h2>
@@ -912,30 +1086,44 @@ CONTACT
 </h2>
 
 
+<div class="contact-box">
+
+
+<h3>
+SONY BOOST SUPPORT
+</h3>
+
+
 <p>
-
-Discord:
-
-<strong>
-sonyxzc
-</strong>
-
+🟢 Online Support
 </p>
 
 
-<div class="online">
+<p>
+Discord:
+<strong>
+sonyxzc
+</strong>
+</p>
 
-🟢 Support Online
 
+<p>
+Average response time:
 <br>
+Less than 5 minutes
+</p>
 
-Usually replies within 5 minutes
+
+<a class="btn" onclick="contact()">
+OPEN DISCORD
+</a>
+
 
 </div>
 
 
-</section>
 
+</section>
 
 
 
@@ -951,44 +1139,55 @@ FAQ
 </h2>
 
 
-<div class="faq-item">
+
+<div class="faq-box">
+
 
 <h3>
-Which WoW version?
+Which WoW version do you support?
 </h3>
+
 
 <p>
 World of Warcraft Retail only.
 </p>
 
-</div>
 
-
-<div class="faq-item">
 
 <h3>
-What methods are available?
+Which boosting methods are available?
 </h3>
+
 
 <p>
 Self Play, Pilot and Parsec.
 </p>
 
-</div>
 
-
-<div class="faq-item">
 
 <h3>
-How to order?
+How can I order?
 </h3>
 
+
 <p>
-Configure your boost and contact Discord: sonyxzc.
+Configure your boost and contact SONYXZC on Discord.
 </p>
 
-</div>
 
+
+<h3>
+Is my account safe?
+</h3>
+
+
+<p>
+All boosts are handled carefully by experienced players.
+</p>
+
+
+
+</div>
 
 
 </section>
@@ -1001,11 +1200,21 @@ Configure your boost and contact Discord: sonyxzc.
 
 <footer>
 
-SONY BOOST © 2026
 
-<br>
+<div class="logo">
+SONY BOOST
+</div>
 
-World of Warcraft Retail PvP
+
+<p>
+World of Warcraft Retail PvP Services
+</p>
+
+
+<p>
+© 2026 SONY BOOST
+</p>
+
 
 </footer>
 
@@ -1018,7 +1227,6 @@ World of Warcraft Retail PvP
 <style>
 
 
-.calculator,
 .contact,
 .faq{
 
@@ -1034,18 +1242,16 @@ padding:90px 40px;
 
 
 
-.calculator h2,
+
 .contact h2,
 .faq h2{
 
 
-font-family:Cinzel,serif;
-
-font-size:50px;
-
 text-align:center;
 
-color:#f5c76a;
+font-size:55px;
+
+color:#ffd369;
 
 margin-bottom:40px;
 
@@ -1054,67 +1260,30 @@ margin-bottom:40px;
 
 
 
-.calc{
+
+.contact-box,
+.faq-box{
 
 
 padding:40px;
 
 
-background:
-
-rgba(255,255,255,.05);
-
-
-border:
-
-1px solid rgba(245,199,106,.3);
-
-
 border-radius:25px;
 
 
-}
+background:
 
+rgba(255,255,255,.06);
 
-
-.calc label{
-
-
-display:block;
-
-margin-top:20px;
-
-color:#aaa;
-
-}
-
-
-
-.calc input,
-.calc select{
-
-
-width:100%;
-
-padding:15px;
-
-margin-top:10px;
-
-
-background:#080b12;
-
-color:white;
 
 
 border:
 
-1px solid #198cff;
+1px solid rgba(255,211,105,.3);
 
 
-border-radius:12px;
 
-
-font-size:18px;
+text-align:center;
 
 
 }
@@ -1123,95 +1292,63 @@ font-size:18px;
 
 
 
-.price{
+.contact-box h3{
 
 
-margin:40px 0;
+font-size:35px;
 
-text-align:center;
+color:#ffd369;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.contact-box p{
+
+
+margin:15px;
+
+font-size:20px;
+
+color:#b8c0d0;
+
+
+}
+
+
+
+
+.faq-box{
+
+
+text-align:left;
+
+
+}
+
+
+
+.faq-box h3{
+
+
+color:#ffd369;
 
 font-size:25px;
 
-
-}
-
-
-
-.price strong{
-
-
-display:block;
-
-font-size:70px;
-
-color:#4cff8a;
+margin-top:25px;
 
 
 }
 
 
 
-
-.online{
-
-
-margin-top:30px;
+.faq-box p{
 
 
-padding:25px;
-
-
-background:rgba(0,255,100,.1);
-
-
-border-radius:20px;
-
-
-text-align:center;
-
-
-font-size:22px;
-
-
-}
-
-
-
-
-.faq-item{
-
-
-padding:25px;
-
-
-margin:20px 0;
-
-
-background:rgba(255,255,255,.05);
-
-
-border-radius:20px;
-
-
-}
-
-
-
-.faq-item h3{
-
-
-color:#f5c76a;
-
-
-}
-
-
-
-.faq-item p{
-
-
-color:#aaa;
-
+color:#b8c0d0;
 
 margin-top:10px;
 
@@ -1224,17 +1361,29 @@ margin-top:10px;
 footer{
 
 
-padding:50px;
-
+padding:60px;
 
 text-align:center;
 
 
-color:#777;
+border-top:
+
+1px solid rgba(255,255,255,.1);
+
+
+color:#8891a5;
 
 
 }
 
+
+
+footer .logo{
+
+
+margin-bottom:20px;
+
+}
 
 
 
@@ -1244,126 +1393,6 @@ color:#777;
 
 
 
+</body>
 
-
-
-
-<script>
-
-
-function calculatePrice(){
-
-
-let service=
-document.getElementById("calcService").value;
-
-
-
-let current=
-Number(document.getElementById("currentRating").value);
-
-
-
-let target=
-Number(document.getElementById("targetRating").value);
-
-
-
-let method=
-Number(document.getElementById("method").value);
-
-
-
-let price=0;
-
-
-
-let diff=target-current;
-
-
-
-if(diff<=0){
-
-price=0;
-
-}
-
-
-else{
-
-
-if(service=="arena"){
-
-
-if(diff<=200)
-price=70;
-
-else if(diff<=400)
-price=150;
-
-else if(diff<=600)
-price=250;
-
-else if(diff<=800)
-price=380;
-
-else
-price=600;
-
-
-}
-
-
-
-if(service=="blitz"){
-
-
-if(diff<=200)
-price=80;
-
-else if(diff<=400)
-price=170;
-
-else if(diff<=600)
-price=300;
-
-else if(diff<=800)
-price=450;
-
-else
-price=700;
-
-
-}
-
-
-}
-
-
-
-price*=method;
-
-
-document.getElementById("price").innerText=Math.round(price);
-
-
-}
-
-
-
-document.querySelectorAll(
-"#calcService,#currentRating,#targetRating,#method"
-)
-.forEach(x=>{
-
-x.oninput=calculatePrice;
-
-x.onchange=calculatePrice;
-
-});
-
-
-calculatePrice();
-
-
-</script>
+</html>
