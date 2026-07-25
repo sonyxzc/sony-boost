@@ -560,6 +560,94 @@ Honor / Conquest Gear
 
 <section id="calculator" class="calculator">
 
+<h2>
+BOOST CALCULATOR
+</h2>
+
+
+<div class="calc-box">
+
+
+<label>
+Service
+</label>
+
+<select id="service">
+
+<option value="arena">
+Arena Boost
+</option>
+
+<option value="blitz">
+Blitz Boost
+</option>
+
+<option value="rbg">
+RBG Boost
+</option>
+
+</select>
+
+
+
+<label>
+Current Rating
+</label>
+
+<input id="current" type="number" value="0">
+
+
+
+<label>
+Target Rating
+</label>
+
+<input id="target" type="number" value="2400">
+
+
+
+<label>
+Method
+</label>
+
+<select id="method">
+
+<option value="1">
+Self Play
+</option>
+
+<option value="1.25">
+Pilot
+</option>
+
+<option value="1.5">
+Parsec
+</option>
+
+</select>
+
+
+
+<div class="result">
+
+TOTAL PRICE
+
+<br>
+
+<span id="price">
+0
+</span>
+
+$
+
+</div>
+
+
+</div>
+
+
+</section>
+
 
 <h2>
 BOOST CALCULATOR
@@ -950,6 +1038,176 @@ document.getElementById("service").value=name;
 
 
 function calculate(){
+
+
+let service =
+document.getElementById("service").value;
+
+
+
+let current =
+Number(document.getElementById("current").value);
+
+
+
+let target =
+Number(document.getElementById("target").value);
+
+
+
+let multiplier =
+Number(document.getElementById("method").value);
+
+
+
+if(target <= current){
+
+document.getElementById("price").innerHTML = 0;
+
+return;
+
+}
+
+
+
+let price = 0;
+
+
+
+let tables = {
+
+
+arena:[
+
+[0,1400,80],
+
+[1400,1600,60],
+
+[1600,1800,90],
+
+[1800,2000,120],
+
+[2000,2200,160],
+
+[2200,2400,220],
+
+[2400,2600,300]
+
+],
+
+
+blitz:[
+
+[0,1400,100],
+
+[1400,1600,80],
+
+[1600,1800,110],
+
+[1800,2000,150],
+
+[2000,2200,200],
+
+[2200,2400,280],
+
+[2400,2600,380]
+
+],
+
+
+rbg:[
+
+[0,1400,120],
+
+[1400,1600,100],
+
+[1600,1800,140],
+
+[1800,2000,190],
+
+[2000,2200,250],
+
+[2200,2400,350],
+
+[2400,2600,500]
+
+]
+
+
+};
+
+
+
+
+let steps = tables[service];
+
+
+
+steps.forEach(step=>{
+
+
+let from = step[0];
+
+let to = step[1];
+
+let cost = step[2];
+
+
+
+let start = Math.max(current,from);
+
+let end = Math.min(target,to);
+
+
+
+if(end > start){
+
+price += cost;
+
+}
+
+
+
+});
+
+
+
+
+price = Math.round(price * multiplier);
+
+
+
+document.getElementById("price").innerHTML = price;
+
+
+}
+
+
+
+
+
+document
+.querySelectorAll("#service,#current,#target,#method")
+.forEach(el=>{
+
+
+el.addEventListener(
+"input",
+calculate
+);
+
+
+el.addEventListener(
+"change",
+calculate
+);
+
+
+});
+
+
+
+calculate();
 
 
 let current =
